@@ -3,67 +3,67 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Package, Boxes, Car, Warehouse, Home, Truck, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Package, Truck, Car, Warehouse, Home, Navigation, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
     icon:   Package,
-    title:  "Packing & Unpacking",
-    short:  "Premium wrapping for every item",
+    title:  "Packaging And Unpacking",
+    short:  "Safe wrapping for every item",
     tag:    "Most Popular",
-    desc:   "Our trained packers use material-specific techniques — bubble wrap for fragile items, foam corner guards for furniture, vacuum bags for soft furnishings. Every box is labelled, inventoried, and sealed before the truck rolls.",
+    desc:   "We are able to both package and Unpacking your items. Our trained packers use material-specific techniques — bubble wrap for fragile items, foam corner guards for furniture, vacuum bags for soft furnishings.",
     points: ["Custom-spec wrapping per item type", "Full inventory list provided", "Unpacking & placement at destination", "Disposal of all packing material"],
-    image:  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=85",
+    image:  "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&q=85",
     accent: "#FF6B2B",
   },
   {
-    icon:   Boxes,
+    icon:   Truck,
     title:  "Loading & Unloading",
     short:  "Scratch-free heavy lifting",
     tag:    null,
-    desc:   "Our crew uses structural ramps, furniture dollies, and load-strap harnesses — not brute force. Every large item is padded, strapped, and loaded with clearance calculations to prevent doorframe and wall damage at both ends.",
+    desc:   "Our people who are good at loading learn the right skills and know-how for modern loading. Our crew uses structural ramps, furniture dollies, and load-strap harnesses to prevent any damage.",
     points: ["Padded floor runners & door guards", "Hydraulic lift for heavy appliances", "Pre-move walkthrough & damage check", "Crew of 3–6 based on move size"],
-    image:  "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&q=85",
+    image:  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=85",
     accent: "#00B49C",
   },
   {
     icon:   Car,
-    title:  "Vehicle Transport",
+    title:  "Car Relocation Services",
     short:  "Cars & bikes, anywhere in India",
     tag:    null,
-    desc:   "Multi-car enclosed carriers and custom-built bike cradles transport your vehicles without a single kilometre added to the odometer. Pre-departure and post-delivery inspection reports are signed by both parties.",
+    desc:   "Car and Bike transport and carrier services are our specialty. Multi-car enclosed carriers and custom-built bike cradles transport your vehicles without a single kilometre added to the odometer.",
     points: ["Enclosed carrier transport", "Zero-odometer-reading policy", "Pre & post delivery inspection report", "Full transit insurance included"],
     image:  "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=900&q=85",
     accent: "#FF6B2B",
   },
   {
     icon:   Warehouse,
-    title:  "Safe Warehousing",
+    title:  "Warehousing Services",
     short:  "Clean, monitored storage",
     tag:    null,
-    desc:   "Our warehouses are climate-controlled, CCTV-monitored 24/7, and pest-treated monthly. Whether you need 7 days or 7 months of storage, your items stay exactly as you left them — catalogued and retrievable on 24-hour notice.",
+    desc:   "We have excellent security and a lot of room. We have a place for you to store your things. Our warehouses are CCTV-monitored 24/7, pest-treated monthly, and items are catalogued and retrievable on 24-hour notice.",
     points: ["Climate & humidity controlled", "24/7 CCTV + security guard", "Monthly pest control treatment", "24-hr retrieval on demand"],
-    image:  "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=900&q=85",
+    image:  "https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?w=900&q=85",
     accent: "#00B49C",
   },
   {
     icon:   Home,
-    title:  "Home Shifting",
+    title:  "Home Shifting Services",
     short:  "Full end-to-end relocation",
     tag:    "Most Requested",
-    desc:   "From disassembly of modular furniture to reassembly and wall-mounting at the new place — we handle every stage. One supervisor is assigned to your move from first call to final sign-off, so you always have a single point of contact.",
+    desc:   "Do you want something brought to you? We are exactly what you need! From disassembly of modular furniture to reassembly and wall-mounting at the new place — we handle every stage.",
     points: ["Dedicated move supervisor", "Furniture disassembly & reassembly", "Appliance disconnect & reconnect", "Post-move cleaning crew optional"],
     image:  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85",
     accent: "#FF6B2B",
   },
   {
-    icon:   Truck,
-    title:  "Commercial Logistics",
+    icon:   Navigation,
+    title:  "Transportation Services",
     short:  "Office moves with zero downtime",
     tag:    null,
-    desc:   "We move offices over weekends or nights so your operations resume Monday morning. IT equipment, server racks, workstations, and filing systems are handled by specialists — labelled by department and reassembled in the new layout.",
+    desc:   "We know how to offer a good range of transportation services. We move offices over weekends or nights so your operations resume Monday morning with zero disruption.",
     points: ["Weekend & after-hours scheduling", "IT & server rack specialists", "Department-labelled system", "Business continuity guaranteed"],
-    image:  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    image:  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85",
     accent: "#00B49C",
   },
 ];
@@ -116,7 +116,6 @@ export default function Services() {
                       : "hover:bg-white/60"
                     }`}
                 >
-                  {/* Active indicator */}
                   {isActive && (
                     <div
                       className="absolute left-0 top-0 bottom-0 w-[3px] rounded-r-sm"
@@ -124,7 +123,6 @@ export default function Services() {
                     />
                   )}
 
-                  {/* Icon */}
                   <div
                     className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isActive ? "scale-105" : "group-hover:scale-105"
@@ -140,7 +138,6 @@ export default function Services() {
                     />
                   </div>
 
-                  {/* Label */}
                   <div className="min-w-0">
                     <div
                       className={`text-[12.5px] font-black uppercase tracking-wide leading-tight transition-colors duration-200 truncate ${
@@ -154,7 +151,6 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* Tag */}
                   {item.tag && (
                     <span
                       className="ml-auto shrink-0 text-[7.5px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md whitespace-nowrap"
@@ -174,7 +170,6 @@ export default function Services() {
             {/* Content block */}
             <div className="flex-1 flex flex-col justify-between px-8 py-8 lg:py-10 order-2 lg:order-1">
 
-              {/* Service heading */}
               <div>
                 <div className="flex items-start justify-between gap-4 mb-5">
                   <div>
@@ -206,12 +201,10 @@ export default function Services() {
                   )}
                 </div>
 
-                {/* Description */}
                 <p className="text-[13.5px] text-gray-500 leading-[1.85] mb-7 max-w-[480px]">
                   {s.desc}
                 </p>
 
-                {/* What's included */}
                 <div className="mb-8">
                   <p className="text-[9.5px] font-black text-gray-400 uppercase tracking-[2px] mb-3">
                     What's Included
@@ -232,7 +225,6 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* CTA row */}
               <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-gray-100">
                 <Link
                   href="#quote"
@@ -264,9 +256,7 @@ export default function Services() {
                 className="object-cover transition-opacity duration-500"
                 sizes="(max-width: 1024px) 100vw, 320px"
               />
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent lg:bg-gradient-to-r lg:from-white/20 lg:via-transparent lg:to-transparent" />
-              {/* Service index badge */}
               <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-[2px] px-3 py-1.5 rounded-lg border border-white/10">
                 {String(active + 1).padStart(2, "0")} / {String(services.length).padStart(2, "0")}
               </div>

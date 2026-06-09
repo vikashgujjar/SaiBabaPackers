@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Truck, Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#" },
@@ -32,19 +33,8 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group">
-          <div className="relative w-[44px] h-[44px] shrink-0">
-            <div className="absolute inset-0 bg-[#FF6B2B]/20 rounded-xl rotate-6 group-hover:rotate-12 transition-transform duration-300" />
-            <div className="relative w-full h-full rounded-xl bg-gradient-to-br from-[#FF6B2B] to-[#FF3D00] flex items-center justify-center shadow-[0_4px_14px_rgba(255,107,43,0.3)]">
-              <Truck size={19} className="text-white" />
-            </div>
-          </div>
-          <div>
-            <div className="text-[#1a1a2e] text-[17px] font-black tracking-tight leading-none uppercase">
-              Sai Baba <span className="text-[#FF6B2B]">Packers</span>
-            </div>
-            <div className="text-[#00B49C] text-[9px] font-bold tracking-[2px] uppercase mt-0.5">
-              Certified Moving Experts
-            </div>
+          <div className="relative w-[144px] h-auto shrink-0">
+            <Image src="/logo.png" alt="Sai Baba Packers" width={144} height={54} className="object-contain w-full h-full" />
           </div>
         </Link>
 

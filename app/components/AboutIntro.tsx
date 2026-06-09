@@ -1,233 +1,158 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { Truck, Zap, Shield, Clock, Package, MapPin, Users, Plus, Minus, ArrowRight } from "lucide-react";
+import { Truck, Zap, Shield, Clock, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-const reasons = [
+const features = [
   {
-    icon:    Zap,
-    title:   "Faster Shifting",
-    desc:    "Meticulous route planning and seasoned loading crews cut your move time in half. We pre-map every job so no minute is wasted on moving day.",
-    proof:   "2×",
-    proofLbl:"faster than avg",
-    accent:  "#FF6B2B",
+    icon:   Zap,
+    /* Moving truck — speed, logistics */
+    image:  "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=85",
+    title:  "We Make It Faster",
+    desc:   "Swift scheduling and optimised loading crews cut your moving time in half versus the industry average.",
+    accent: "#FF6B2B",
   },
   {
-    icon:    Shield,
-    title:   "Safe & Secure",
-    desc:    "Multi-ply cartons, bubble wrap, foam corner guards — every item is wrapped to the correct spec. Zero damage claims on over 2,500 completed moves.",
-    proof:   "0",
-    proofLbl:"damage claims",
-    accent:  "#00B49C",
+    icon:   Shield,
+    /* Cardboard boxes stacked — packing service */
+    image:  "https://images.unsplash.com/photo-1530435460869-d13625c69bbf?w=800&q=85",
+    title:  "Save & Secure Move",
+    desc:   "Multi-layer premium packing — bubble wrap, foam corners, heavy-gauge cartons — for zero-damage delivery.",
+    accent: "#00B49C",
   },
   {
-    icon:    Clock,
-    title:   "On-Time Delivery",
-    desc:    "Logistics pre-mapped 48 hours before your move. Live GPS tracking keeps us on schedule. If we're late, you get compensated — no questions asked.",
-    proof:   "99%",
-    proofLbl:"on-time rate",
-    accent:  "#FF6B2B",
-  },
-  {
-    icon:    Package,
-    title:   "Expert Packaging",
-    desc:    "Different items need different wrap. Crockery gets foam dividers. TVs get custom-cut foam. Wardrobes get garment boxes. Nothing is improvised.",
-    proof:   "15+",
-    proofLbl:"years packing",
-    accent:  "#00B49C",
-  },
-  {
-    icon:    MapPin,
-    title:   "Pan-India Network",
-    desc:    "Owned branches in 50+ cities. No third-party handoffs in the middle of your move. One team, one chain of custody, door to door.",
-    proof:   "50+",
-    proofLbl:"cities covered",
-    accent:  "#FF6B2B",
-  },
-  {
-    icon:    Users,
-    title:   "Trusted & Reliable",
-    desc:    "2,500+ families and 250+ companies have moved with us — most through referrals. Our reputation is built entirely on word-of-mouth, not advertising.",
-    proof:   "4.9★",
-    proofLbl:"avg. rating",
-    accent:  "#00B49C",
+    icon:   Clock,
+    /* Delivery handshake at door — on-time fulfilment */
+    image:  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=85",
+    title:  "On Time Delivery",
+    desc:   "Real-time route optimisation and pre-mapped logistics ensure punctual arrivals, every single time.",
+    accent: "#FF6B2B",
   },
 ];
 
 export default function AboutIntro() {
-  const [open, setOpen] = useState<number>(0);
-
   return (
-    <section className="bg-[#F7F4EE] py-20 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="grid lg:grid-cols-[1fr_380px] min-h-[600px]">
+    <section className="bg-[#F7F4EE] py-20 overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-5 items-stretch">
 
+          {/* ── LEFT: Brand intro with background photo ── */}
+          <div className="relative rounded-3xl overflow-hidden min-h-[380px] flex flex-col justify-between">
 
-          {/* ── RIGHT: Accordion list ── */}
-          <div className="bg-white divide-y divide-gray-100">
-            {reasons.map((r, i) => {
-              const Icon = r.icon;
-              const isOpen = open === i;
+            {/* Background photo — team/warehouse */}
+            <Image
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+              alt="Sai Baba Packers team"
+              fill
+              className="object-cover object-center"
+            />
 
+            {/* Dark overlay for legibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e]/85 via-[#1a1a2e]/70 to-[#1a1a2e]/90" />
+
+            {/* Content */}
+            <div className="relative z-10 p-8 flex flex-col justify-between h-full">
+
+              
+
+              {/* Middle: headline + copy */}
+              <div className="my-6">
+                <h3 className="text-[24px] font-black text-white uppercase leading-[0.95] tracking-tight mb-4">
+                  We Are Known For Growth &amp; New Ideas
+                </h3>
+                <p className="text-gray-400 text-[12.5px] leading-relaxed">
+                  Sai Baba Packers &amp; Movers has given our clients some of the best
+                  relocation services in India. Our goal has always been to move things
+                  reliably and without causing any problems.
+                </p>
+              </div>
+
+              {/* Bottom: CTA + stats */}
+              <div>
+                {/* Mini stats */}
+                <div className="flex gap-5 mb-5 pb-5 border-b border-white/10">
+                  {[
+                    { n: "2500+", l: "Moves"  },
+                    { n: "15+",   l: "Years"  },
+                    { n: "50+",   l: "Cities" },
+                  ].map(s => (
+                    <div key={s.l}>
+                      <div className="text-[20px] font-black text-[#FF6B2B] leading-none">{s.n}</div>
+                      <div className="text-[8.5px] font-bold text-gray-500 uppercase tracking-wider mt-0.5">{s.l}</div>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="#about"
+                  className="group inline-flex items-center gap-2 text-[#FF6B2B] hover:text-white font-black text-[11px] uppercase tracking-[2px] transition-colors duration-200"
+                >
+                  More About Us
+                  <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* ── RIGHT: 3 feature cards ── */}
+          <div className="grid sm:grid-cols-3 gap-4">
+            {features.map((f) => {
+              const Icon = f.icon;
               return (
-                <div key={r.title} className="relative overflow-hidden">
-                  {/* Trigger row */}
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? -1 : i)}
-                    className={`w-full flex items-center gap-5 px-8 py-5 text-left transition-all duration-300 group
-                      ${isOpen ? "bg-[#FFF8F3]" : "bg-white hover:bg-gray-50/70"}`}
-                  >
-                    {/* Left accent bar */}
-                    <div
-                      className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-r-full transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0"}`}
-                      style={{ background: r.accent }}
+                <div
+                  key={f.title}
+                  className="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-[0_20px_48px_rgba(0,0,0,0.09)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
+                >
+                  {/* Photo */}
+                  <div className="relative h-[175px] overflow-hidden">
+                    <Image
+                      src={f.image}
+                      alt={f.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, 300px"
                     />
 
-                    {/* Icon */}
+                    {/* Gradient bottom fade */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+
+                    {/* Category label top-left */}
                     <div
-                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? "scale-105" : ""}`}
-                      style={{ background: isOpen ? r.accent : `${r.accent}12` }}
+                      className="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[8.5px] font-black uppercase tracking-[1.5px] text-white"
+                      style={{ background: f.accent }}
                     >
-                      <Icon
-                        size={19}
-                        strokeWidth={1.8}
-                        style={{ color: isOpen ? "#fff" : r.accent }}
-                        className="transition-colors duration-300"
-                      />
+                      {f.accent === "#FF6B2B" ? "Our Service" : "Guaranteed"}
                     </div>
 
-                    {/* Title */}
-                    <div className="flex-1 min-w-0">
-                      <h4
-                        className="text-[14px] font-black uppercase tracking-wide transition-colors duration-200"
-                        style={{ color: isOpen ? r.accent : "#1a1a2e" }}
-                      >
-                        {r.title}
-                      </h4>
-                      {!isOpen && (
-                        <p className="text-[11.5px] text-gray-400 mt-0.5 font-medium truncate max-w-[340px]">
-                          {r.desc.slice(0, 62)}…
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Proof stat — visible always, larger when open */}
-                    <div className="shrink-0 text-right mr-3 transition-all duration-300">
-                      <div
-                        className={`font-black leading-none tracking-tight transition-all duration-300 ${isOpen ? "text-[32px]" : "text-[20px]"}`}
-                        style={{ color: r.accent }}
-                      >
-                        {r.proof}
-                      </div>
-                      <div className="text-[8.5px] font-bold text-gray-400 uppercase tracking-wider mt-0.5 whitespace-nowrap">
-                        {r.proofLbl}
-                      </div>
-                    </div>
-
-                    {/* Toggle icon */}
+                    {/* Icon badge bottom-left on photo */}
                     <div
-                      className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 border ${
-                        isOpen
-                          ? "border-transparent text-white"
-                          : "border-gray-200 text-gray-400 group-hover:border-gray-300"
-                      }`}
-                      style={isOpen ? { background: r.accent } : {}}
+                      className="absolute bottom-3 left-4 w-9 h-9 rounded-xl flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+                      style={{ background: f.accent }}
                     >
-                      {isOpen
-                        ? <Minus size={13} strokeWidth={2.5} />
-                        : <Plus  size={13} strokeWidth={2.5} />
-                      }
+                      <Icon size={16} className="text-white" strokeWidth={2} />
                     </div>
-                  </button>
+                  </div>
 
-                  {/* Expanded body */}
-                  <div
-                    className={`overflow-hidden transition-all duration-400 ease-in-out ${isOpen ? "max-h-40" : "max-h-0"}`}
-                  >
-                    <div className="px-8 pb-6 pt-0 bg-[#FFF8F3] flex items-start gap-5">
-                      {/* Indent guide line */}
-                      <div className="shrink-0 w-11 flex justify-center pt-1">
-                        <div className="w-px h-full min-h-[40px]" style={{ background: `${r.accent}25` }} />
-                      </div>
-                      <p className="text-[13.5px] text-gray-600 leading-[1.8] flex-1">
-                        {r.desc}
-                      </p>
-                    </div>
+                  {/* Text content */}
+                  <div className="p-5 flex flex-col flex-1">
+                    <h4 className="text-[14.5px] font-black text-[#1a1a2e] uppercase tracking-wide leading-tight mb-2.5">
+                      {f.title}
+                    </h4>
+                    <p className="text-[12.5px] text-gray-500 leading-relaxed flex-1 mb-4">
+                      {f.desc}
+                    </p>
+                    <Link
+                      href="#services"
+                      className="group/link inline-flex items-center gap-1.5 text-[10.5px] font-black uppercase tracking-wider transition-colors duration-200"
+                      style={{ color: f.accent }}
+                    >
+                      Read More
+                      <ArrowRight size={11} className="group-hover/link:translate-x-0.5 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          {/* ── LEFT: Dark sticky panel ── */}
-          <div className="bg-[#1a1a2e] px-10 py-14 flex flex-col justify-between relative overflow-hidden">
-
-            {/* Decorative large "WHY" watermark */}
-            <div
-              className="absolute -bottom-6 -left-4 text-[160px] font-black leading-none select-none pointer-events-none tracking-tighter"
-              style={{ color: "rgba(255,255,255,0.03)" }}
-            >
-              WHY
-            </div>
-
-            {/* Teal glow orb */}
-            <div className="absolute top-0 right-0 w-56 h-56 bg-[#00B49C]/8 rounded-full blur-[80px] pointer-events-none" />
-
-            <div className="relative z-10">
-              {/* Eyebrow */}
-              <span className="block text-[9.5px] font-black text-[#00B49C] uppercase tracking-[3px] mb-4">
-                Why Choose Us
-              </span>
-
-              {/* Headline */}
-              <h2 className="text-[40px] xl:text-[50px] font-black text-white uppercase leading-[0.9] tracking-tight mb-6">
-                Built<br />Around<br />
-                <span className="text-[#FF6B2B]">Your<br />Move.</span>
-              </h2>
-
-              <p className="text-gray-500 text-[13.5px] leading-relaxed max-w-[280px]">
-                Six promises we back with numbers — not just words.
-                Click any reason to see the proof.
-              </p>
-            </div>
-
-            {/* Brand pill */}
-            <div className="relative z-10 mt-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-[#FF6B2B] rounded-xl flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(255,107,43,0.35)]">
-                  <Truck size={18} className="text-white" />
-                </div>
-                <div>
-                  <div className="text-white text-[13px] font-black leading-tight">Sai Baba Packers</div>
-                  <div className="text-[#00B49C] text-[9px] font-bold uppercase tracking-wider mt-0.5">Est. 2010 · Chandigarh</div>
-                </div>
-              </div>
-
-              {/* Mini stats row */}
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { n: "2,500+", l: "Moves" },
-                  { n: "50+",    l: "Cities" },
-                  { n: "15 yr",  l: "Exp." },
-                ].map(s => (
-                  <div key={s.l} className="border-t border-white/10 pt-3">
-                    <div className="text-[18px] font-black text-[#FF6B2B] leading-none">{s.n}</div>
-                    <div className="text-[9px] font-bold text-gray-600 uppercase tracking-wider mt-0.5">{s.l}</div>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="#quote"
-                className="mt-8 group flex items-center justify-center gap-2 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white font-black uppercase tracking-[2px] text-[11px] px-6 py-3.5 rounded-xl shadow-[0_6px_20px_rgba(255,107,43,0.3)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
-              >
-                Get Free Quote
-                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </section>
