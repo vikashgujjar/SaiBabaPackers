@@ -160,7 +160,7 @@ export default function ClientsCounters() {
               </h3>
             </div>
             <p className="text-[12.5px] text-gray-400 font-medium max-w-[300px]">
-              From Fortune 500 companies to growing startups — we move them all.
+              From home shifting to office relocation, car transport to warehousing — we move them all.
             </p>
           </div>
 

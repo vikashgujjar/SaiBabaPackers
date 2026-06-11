@@ -11,35 +11,35 @@ import {
 /* ── Slides ── */
 const SLIDES = [
   {
-    src:  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85",
-    alt:  "Moving truck on open highway",
+    src:  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=90",
+    alt:  "Professional movers at work",
     city: "Pan-India Delivery",
   },
   {
-    src:  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1800&q=85",
+    src:  "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=1920&q=90",
     alt:  "Professional packing service",
     city: "Premium Packing",
   },
   {
-    src:  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1800&q=85",
-    alt:  "Relocation team in action",
-    city: "Expert Crew",
+    src:  "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1920&q=90",
+    alt:  "Relocation fleet on the road",
+    city: "Pan-India Fleet",
   },
 ];
 
 const MOVE_TYPES = [
-  { id: "home",    label: "Home",    icon: "🏠" },
-  { id: "office",  label: "Office",  icon: "🏢" },
-  { id: "vehicle", label: "Vehicle", icon: "🚗" },
-  { id: "storage", label: "Storage", icon: "📦" },
+  { id: "home",    label: "Home Shifting",  icon: "🏠" },
+  { id: "office",  label: "Office Shifting", icon: "🏢" },
+  { id: "vehicle", label: "Car Relocation",  icon: "🚗" },
+  { id: "storage", label: "Warehousing",     icon: "📦" },
 ];
 
 const TICKER = [
   "🚚  Chandigarh → Delhi",
-  "📦  Mumbai → Pune",
-  "🏠  Bengaluru → Hyderabad",
-  "🚗  Delhi → Jaipur",
-  "🏢  Chennai → Bengaluru",
+  "📦  Chandigarh → Mumbai",
+  "🏠  Chandigarh → Bengaluru",
+  "🚗  Chandigarh → Dehradun",
+  "🏢  Chandigarh → Pune",
 ];
 
 export default function Hero() {
@@ -95,7 +95,7 @@ export default function Hero() {
           </div>
         ))}
         {/* Multi-layer overlay for maximum legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d1a]/80 via-[#0d0d1a]/55 to-[#0d0d1a]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d1a]/90 via-[#0d0d1a]/60 to-[#0d0d1a]/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d1a]/40 via-transparent to-transparent" />
       </div>
 
@@ -133,21 +133,21 @@ export default function Hero() {
 
         {/* Headline — big, centred, layered */}
         <h1 className="font-black uppercase leading-[1] tracking-tight text-center mb-5">
-          <span className="block text-[52px] sm:text-[72px] lg:text-[96px] xl:text-[92px] text-white">
+          <span className="block text-[36px] sm:text-[52px] lg:text-[96px] xl:text-[92px] text-white">
             We Move
           </span>
-          <span className="block text-[52px] sm:text-[72px] lg:text-[96px] xl:text-[82px] text-[#FF6B2B]">
+          <span className="block text-[36px] sm:text-[52px] lg:text-[96px] xl:text-[82px] text-[#FF6B2B]">
             Your World
           </span>
-          <span className="block text-[36px] sm:text-[48px] lg:text-[62px] xl:text-[72px] text-white/40 font-black tracking-widest mt-1">
+          <span className="block text-[28px] sm:text-[36px] lg:text-[62px] xl:text-[72px] text-white/40 font-black tracking-widest mt-1">
             SAFELY & ON TIME
           </span>
         </h1>
 
         {/* Sub copy */}
         <p className="text-white text-[14px] sm:text-[16px] leading-[1.8] max-w-[540px] mb-6">
-          Trained professionals. Premium packing. Damage-free delivery — for homes,
-          offices & vehicles across 50+ Indian cities.
+          Home shifting, office relocation, car transport, packaging &amp; unpacking,
+          loading &amp; unloading, and warehousing — damage-free across 50+ Indian cities.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default function Hero() {
           {!submitted ? (
             <form onSubmit={handleSubmit}>
               {/* Move type tabs — above the bar */}
-              <div className="flex items-center gap-2 mb-3 flex-wrap justify-center">
+              <div className="flex items-center gap-2 mb-3 flex-nowrap overflow-auto justify-start py-2 md:justify-center">
                 {MOVE_TYPES.map(t => (
                   <button key={t.id} type="button" onClick={() => setMoveType(t.id)}
                     className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider border transition-all duration-200 ${
@@ -239,12 +239,12 @@ export default function Hero() {
                 <p className="text-white/35 text-[10.5px] font-medium">
                   No spam · Our team calls within 30 min
                 </p>
-                <a href="tel:+918915162726"
+                <a href="tel:+919815162726"
                   className="flex items-center gap-2 text-white/50 hover:text-white text-[11px] font-bold transition-colors duration-200 group">
                   <div className="w-6 h-6 rounded-full bg-white/10 group-hover:bg-[#FF6B2B] flex items-center justify-center transition-colors duration-200">
                     <Phone size={11} className="text-white" />
                   </div>
-                  Prefer to call? +91-8915162726
+                  Prefer to call? +91-9815162726
                 </a>
               </div>
             </form>

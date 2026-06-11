@@ -5,11 +5,11 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Award } from "lucide-react";
 
 const checks = [
-  "Fully certified & background-checked workforce",
-  "High-strength bubble wraps & heavy-gauge cartons",
-  "Transit insurance with immediate claim settlements",
+  "Home shifting & office relocation specialists since 2010",
+  "Expert packaging, unpacking & loading-unloading services",
+  "Car relocation & warehousing with full transit insurance",
   "Transparent estimates — zero hidden charges, ever",
-  "Expansive self-owned fleet for door-to-door delivery",
+  "Own fleet for reliable door-to-door transportation services",
 ];
 
 const stats = [
@@ -92,18 +92,25 @@ export default function AboutUs() {
               </h2>
 
               <p className="text-gray-500 text-[13.5px] leading-[1.85] mb-4">
-                Since 2010, Sai Baba Packers &amp; Movers has been a benchmark of
-                reliable logistics across India — specialising in household moves,
-                office shifting, and vehicle transit.
+                Through foresight, planning, and hard work, we have become the undisputed
+                market leader in the moving and packing services business. We started out
+                modest, but we've expanded in every area possible. In order to serve our
+                clients well, we have made it a priority to be on the cutting edge of our field.
               </p>
               <p className="text-gray-500 text-[13.5px] leading-[1.85] mb-4">
-                Trained packing experts, premium wrapping supplies, and an updated
-                carrier fleet deliver absolute cargo safety on every single move.
+                We are an expanding and creative group. Services supplied by Sai Baba
+                Packers and Movers have been among the best in the industry. Our mission
+                from the start has been to offer secure, streamlined, and trouble-free
+                relocation of goods. As a result, we've integrated cutting-edge packing
+                methods and high-quality packing supplies into our standard operating procedure.
               </p>
-              <p className="text-gray-500 text-[13.5px] leading-[1.85] mb-4">
-                Trained packing experts, premium wrapping supplies, and an updated
-                carrier fleet deliver absolute cargo safety on every single move.
-              </p>
+              {/* <p className="text-gray-500 text-[13.5px] leading-[1.85] mb-4">
+                <span className="text-white font-bold">We Serve:</span> Chandigarh, Faridabad,
+                Ghaziabad, Delhi, Noida, Gurgaon, Vaishali, Indirapuram, Varanasi, Agra,
+                Kanpur, Lucknow, Dehradun, Ambala, Ludhiana, Patiala, Amritsar, Kolkata,
+                Guwahati, Patna, Madurai, Mangalore, Mumbai, Nagpur, Navi Mumbai &amp; all
+                major cities across India.
+              </p> */}
 
               <Link
                 href="#services"
@@ -124,7 +131,7 @@ export default function AboutUs() {
                 What Sets Us Apart
               </p>
               <ul className="space-y-3.5">
-                {checks.map((c, i) => (
+                {checks.map((c) => (
                   <li key={c} className="flex items-start gap-3 group">
                     {/* Animated index + check */}
                     <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 bg-[#00B49C]/10 group-hover:bg-[#00B49C] transition-colors duration-200">

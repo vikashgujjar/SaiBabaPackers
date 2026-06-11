@@ -76,13 +76,13 @@ export default function CtaBanner() {
             </h2>
 
             <p className="text-gray-500 text-[14px] leading-relaxed max-w-[440px] mb-8">
-              Our moving consultants give you a transparent, itemised quote — no pressure, no hidden charges. Most calls take under 10 minutes.
+              Our packers and movers experts give you a transparent, itemised quote for home shifting, office relocation, or vehicle transport — no hidden charges. Most calls take under 10 minutes.
             </p>
 
             {/* Trust pills */}
             <div className="flex items-center gap-5 flex-wrap">
               {[
-                { icon: ShieldCheck, label: "100% Free Consultation" },
+                { icon: ShieldCheck, label: "Free Relocation Consultation" },
                 { icon: ShieldCheck, label: "No Commitment Required" },
                 { icon: ShieldCheck, label: "Reply in 30 Minutes" },
               ].map((t) => (
@@ -118,7 +118,7 @@ export default function CtaBanner() {
 
             {/* Primary CTA — phone number as the hero */}
             <a
-              href="tel:+918915162726"
+              href="tel:+919815162726"
               className="group flex items-center gap-4 bg-[#FF6B2B] hover:bg-[#e85d1f] rounded-2xl px-6 py-5 shadow-[0_12px_40px_rgba(255,107,43,0.35)] hover:shadow-[0_16px_48px_rgba(255,107,43,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
             >
               <div className="w-11 h-11 bg-white/20 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-white/30 transition-colors duration-200">
@@ -129,7 +129,7 @@ export default function CtaBanner() {
                   Call us directly
                 </p>
                 <p className="text-white font-black text-[20px] leading-none tracking-tight">
-                  +91-8915162726
+                  +91-9815162726
                 </p>
               </div>
               <ArrowRight size={18} className="text-white/60 group-hover:translate-x-1 transition-transform shrink-0" />
@@ -145,7 +145,7 @@ export default function CtaBanner() {
                 <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <a
-                href="https://wa.me/918915162726?text=Hi%20Sai%20Baba%20Packers%2C%20I%20need%20a%20free%20quote."
+                href="https://wa.me/919815162726?text=Hi%20Sai%20Baba%20Packers%2C%20I%20need%20a%20free%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 hover:border-[#25D366] text-[#25D366] hover:text-white font-black uppercase text-[10.5px] tracking-[1.5px] px-4 py-3.5 rounded-xl transition-all duration-200"

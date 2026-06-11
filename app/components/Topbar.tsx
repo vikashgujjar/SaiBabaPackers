@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { Phone, Mail } from "lucide-react";
 
 const TICKER_ITEMS = [
-  "🚚 Household & Commercial Relocation Specialists",
-  "⭐ Rated 4.9/5 by 10,000+ Happy Customers",
-  "🛡️ 100% Safe, Secure & Insured Moving Guarantee",
-  "⚡ ISO 9001:2015 Certified Packers and Movers",
+  "🚚 Home Shifting, Office Relocation & Car Transport Services in Chandigarh",
+  "📦 Expert Packaging, Unpacking & Warehousing — Serving Since 2010",
+  "🛡️ Safe, Insured Loading & Unloading — ISO 9001:2015 Certified",
+  "⭐ Rated 4.9/5 by 2,500+ Families — Chandigarh's #1 Packers & Movers",
 ];
 
 export default function Topbar() {
@@ -51,9 +51,9 @@ export default function Topbar() {
         </div>
 
         <div className="flex items-center gap-1 shrink-0">
-          <a href="tel:+918915162726" className="flex items-center gap-1.5 px-3 py-1.5 rounded text-[11px] font-semibold text-gray-300 hover:text-[#FF6B2B] hover:bg-white/5 transition-all duration-200">
+          <a href="tel:+919815162726" className="flex items-center gap-1.5 px-3 py-1.5 rounded text-[11px] font-semibold text-gray-300 hover:text-[#FF6B2B] hover:bg-white/5 transition-all duration-200">
             <Phone size={11} className="text-[#FF6B2B]" />
-            +91-8915162726
+            +91-9815162726
           </a>
           <div className="w-px h-3 bg-white/10" />
           <a href="mailto:saibabamovers.chd@gmail.com" className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded text-[11px] text-gray-400 hover:text-[#FF6B2B] hover:bg-white/5 transition-all duration-200">
@@ -62,7 +62,7 @@ export default function Topbar() {
           </a>
           <div className="w-px h-3 bg-white/10 hidden md:block" />
           <a
-            href="https://wa.me/918915162726?text=Hi%20Sai%20Baba%20Packers%2C%20I%20need%20a%20free%20quote."
+            href="https://wa.me/919815162726?text=Hi%20Sai%20Baba%20Packers%2C%20I%20need%20a%20free%20quote."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white font-bold text-[10px] uppercase tracking-widest px-3 py-1.5 rounded border border-[#25D366]/20 hover:border-[#25D366] transition-all duration-200 ml-1"

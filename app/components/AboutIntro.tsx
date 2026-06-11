@@ -14,7 +14,7 @@ const features = [
   {
     icon:   Shield,
     /* Cardboard boxes stacked — packing service */
-    image:  "https://images.unsplash.com/photo-1530435460869-d13625c69bbf?w=800&q=85",
+    image:  "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=800&q=90",
     title:  "Save & Secure Move",
     desc:   "Multi-layer premium packing — bubble wrap, foam corners, heavy-gauge cartons — for zero-damage delivery.",
     accent: "#00B49C",
@@ -22,7 +22,7 @@ const features = [
   {
     icon:   Clock,
     /* Delivery handshake at door — on-time fulfilment */
-    image:  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=85",
+    image:  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85",
     title:  "On Time Delivery",
     desc:   "Real-time route optimisation and pre-mapped logistics ensure punctual arrivals, every single time.",
     accent: "#FF6B2B",
@@ -40,7 +40,7 @@ export default function AboutIntro() {
 
             {/* Background photo — team/warehouse */}
             <Image
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=90"
               alt="Sai Baba Packers team"
               fill
               className="object-cover object-center"
@@ -57,12 +57,12 @@ export default function AboutIntro() {
               {/* Middle: headline + copy */}
               <div className="my-6">
                 <h3 className="text-[24px] font-black text-white uppercase leading-[0.95] tracking-tight mb-4">
-                  We Are Known For Growth &amp; New Ideas
+                  Chandigarh's Most Trusted Movers Since 2010
                 </h3>
                 <p className="text-gray-400 text-[12.5px] leading-relaxed">
-                  Sai Baba Packers &amp; Movers has given our clients some of the best
-                  relocation services in India. Our goal has always been to move things
-                  reliably and without causing any problems.
+                  Sai Baba Packers &amp; Movers has built a 15-year legacy of damage-free
+                  relocations across 50+ Indian cities — from door-to-door home shifting
+                  to corporate office moves and vehicle transport.
                 </p>
               </div>
 

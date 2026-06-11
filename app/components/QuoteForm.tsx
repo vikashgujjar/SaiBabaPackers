@@ -61,11 +61,10 @@ export default function QuoteForm() {
                       <button
                         key={t} type="button"
                         onClick={() => setMoveType(t)}
-                        className={`px-4 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border transition-all duration-150 ${
-                          moveType === t
+                        className={`px-4 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border transition-all duration-150 ${moveType === t
                             ? "bg-[#FF6B2B] border-[#FF6B2B] text-white shadow-[0_4px_12px_rgba(255,107,43,0.25)]"
                             : "bg-white border-gray-200 text-gray-500 hover:border-[#FF6B2B]/30 hover:text-[#FF6B2B]"
-                        }`}
+                          }`}
                       >
                         {t}
                       </button>
@@ -172,7 +171,7 @@ export default function QuoteForm() {
                   </div>
                 </div>
                 <button
-                  onClick={() => { setSent(false); setForm({ name:"", phone:"", email:"", from:"", to:"", message:"" }); }}
+                  onClick={() => { setSent(false); setForm({ name: "", phone: "", email: "", from: "", to: "", message: "" }); }}
                   className="text-[11px] text-gray-400 underline hover:text-[#FF6B2B] transition-colors"
                 >
                   Submit another enquiry
@@ -187,20 +186,11 @@ export default function QuoteForm() {
             {/* Photo */}
             <div className="relative rounded-3xl overflow-hidden h-52 lg:h-auto lg:flex-1 min-h-[200px]">
               <Image
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=85"
-                alt="Sai Baba Packers team"
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=90"
+                alt="Keys to your new home"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/70 via-transparent to-transparent" />
-              {/* Brand watermark */}
-              <div className="absolute bottom-5 left-5">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 shrink-0">
-                    <Image src="/logo.png" alt="Sai Baba Packers" width={32} height={32} className="object-contain w-full h-full" />
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Trust checklist */}
@@ -209,10 +199,10 @@ export default function QuoteForm() {
                 Why Enquire With Us
               </p>
               {[
-                { icon: ShieldCheck, label: "100% Free — No Obligation Quote",  accent: "#00B49C" },
-                { icon: BadgeCheck,  label: "ISO 9001:2015 Certified Company",  accent: "#FF6B2B" },
-                { icon: Clock,       label: "Response Guaranteed in 30 Minutes", accent: "#00B49C" },
-                { icon: Truck,       label: "Own Fleet — No Third-Party Handoffs", accent: "#FF6B2B" },
+                { icon: ShieldCheck, label: "100% Free — No Obligation Quote", accent: "#00B49C" },
+                { icon: BadgeCheck, label: "ISO 9001:2015 Certified Packers & Movers", accent: "#FF6B2B" },
+                { icon: Clock, label: "30-Min Response for All Shifting Enquiries", accent: "#00B49C" },
+                { icon: Truck, label: "Own Fleet — Home, Office & Vehicle Shifting", accent: "#FF6B2B" },
               ].map(t => (
                 <div key={t.label} className="flex items-center gap-3">
                   <div
@@ -228,7 +218,7 @@ export default function QuoteForm() {
 
             {/* Call strip */}
             <a
-              href="tel:+918915162726"
+              href="tel:+919815162726"
               className="group flex items-center gap-4 bg-[#FF6B2B] hover:bg-[#e85d1f] rounded-2xl px-5 py-4 shadow-[0_8px_24px_rgba(255,107,43,0.28)] hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="w-10 h-10 bg-white/20 group-hover:bg-white/30 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-200">
@@ -236,7 +226,7 @@ export default function QuoteForm() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-white/70 text-[9px] font-black uppercase tracking-[2px]">Prefer to call?</p>
-                <p className="text-white font-black text-[17px] leading-tight tracking-tight">+91-8915162726</p>
+                <p className="text-white font-black text-[17px] leading-tight tracking-tight">+91-9815162726</p>
               </div>
               <ArrowRight size={16} className="text-white/50 group-hover:translate-x-1 transition-transform shrink-0" />
             </a>

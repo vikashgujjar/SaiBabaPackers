@@ -10,14 +10,14 @@ import AboutUs from "@/app/components/AboutUs";
 import Gallery from "@/app/components/Gallery";
 import Testimonials from "@/app/components/Testimonials";
 import ClientsCounters from "@/app/components/ClientsCounters";
+import PricingTable from "@/app/components/PricingTable";
+import LocationsSection from "@/app/components/LocationsSection";
+import SeoContent from "@/app/components/SeoContent";
 import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Topbar />
-      <Navbar />
-      <main>
         <Hero />
         <FeaturesStrip />
         <AboutIntro />
@@ -28,8 +28,9 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <ClientsCounters />
-      </main>
-      <Footer />
+        <PricingTable />
+        <SeoContent />
+        <LocationsSection />
     </>
   );
 }

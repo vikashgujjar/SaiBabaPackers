@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -20,7 +23,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${outfit.variable} h-full scroll-smooth`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        <Topbar />
+        <Navbar />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

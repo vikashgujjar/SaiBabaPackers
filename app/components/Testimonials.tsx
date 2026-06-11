@@ -5,7 +5,7 @@ import { Star, ArrowRight, ArrowLeft, MapPin } from "lucide-react";
 
 const testimonials = [
   {
-    text:     "I work in a service industry too and I can stamp with guarantee that your company is the best. The loaders along with supervisors are assets to your company. You have got a customer for life.",
+    text:     "I work in a service industry too and I can stamp with guarantee that your company is the best and your workforce along with supervisors are asset to your company. Your company has got permanent customer for life.",
     name:     "Ramesh Singh",
     role:     "Home Relocation",
     initial:  "R",
@@ -15,8 +15,8 @@ const testimonials = [
     month:    "March 2024",
   },
   {
-    text:     "The employees of Sai Baba Packers are extremely skilled and courteous. My vehicle was transported well before schedule. Highly recommended for vehicle shifting across states.",
-    name:     "Mohan Verma",
+    text:     "I must say that the employees of the Sai Baba Packers & Movers company are very skilled and courteous. The car was transported to a new location well before time. I will definitely prefer and recommend their services to everyone for their car moving needs.",
+    name:     "Mohan Varma",
     role:     "Car Relocation",
     initial:  "M",
     color:    "#00B49C",
@@ -25,14 +25,24 @@ const testimonials = [
     month:    "January 2024",
   },
   {
-    text:     "The shifting team was very professional and punctual. All our delicate furniture and glassware was wrapped carefully. Not a single scratch on anything. Exceptional packing standards.",
-    name:     "Priya Sharma",
-    role:     "Office Relocation",
-    initial:  "P",
+    text:     "I work in a service industry too and I can stamp with guarantee that your company is the best and your workforce along with supervisors are asset to your company. Your company has got permanent customer for life.",
+    name:     "Sahil Khan",
+    role:     "Home Relocation",
+    initial:  "S",
     color:    "#FF6B2B",
     rating:   5,
-    location: "Delhi → Pune",
-    month:    "February 2024",
+    location: "Chandigarh → Delhi",
+    month:    "November 2023",
+  },
+  {
+    text:     "Sai Baba Packers & Movers in Chandigarh relocated my precious car to a new location in Delhi without any damage. They were prompt and fast to look after all my vehicle shifting requirements and made it a point to cover every possible part of the car with high quality packing materials.",
+    name:     "Sanjay Kumar",
+    role:     "Car Relocation",
+    initial:  "S",
+    color:    "#00B49C",
+    rating:   5,
+    location: "Chandigarh → Delhi",
+    month:    "December 2023",
   },
 ];
 
@@ -182,7 +192,7 @@ export default function Testimonials() {
 
           {/* ══ SECONDARY CARDS + BADGE ══ */}
           <div className="flex flex-col gap-4">
-            {others.map((t) => (
+            {others.slice(0, 2).map((t) => (
               <button
                 key={t.name}
                 onClick={() => setActive(testimonials.indexOf(t))}
@@ -228,22 +238,6 @@ export default function Testimonials() {
               </button>
             ))}
 
-            {/* Social proof cluster */}
-            <div className="bg-white border border-orange-100 rounded-2xl p-4 flex items-center gap-4 shadow-[0_4px_16px_rgba(255,107,43,0.06)]">
-              <div className="flex -space-x-2 shrink-0">
-                {["R","M","P","A","S"].map((l, i) => (
-                  <div key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white font-black text-[11px] shadow-sm"
-                    style={{ background: i % 2 === 0 ? "#FF6B2B" : "#00B49C" }}>
-                    {l}
-                  </div>
-                ))}
-              </div>
-              <div className="min-w-0">
-                <div className="text-[12.5px] font-black text-[#1a1a2e] leading-none">2,500+ happy families</div>
-                <div className="text-[10px] text-gray-400 font-bold mt-0.5">trust Sai Baba Packers</div>
-              </div>
-            </div>
           </div>
         </div>
 

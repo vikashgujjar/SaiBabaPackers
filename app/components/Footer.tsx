@@ -46,7 +46,7 @@ const socials = [
   { label: "LinkedIn",  href: "#", icon: FaLinkedinIn, color: "#0A66C2" },
   { label: "Instagram", href: "#", icon: FaInstagram,  color: "#E1306C" },
   { label: "WhatsApp",
-    href: "https://wa.me/918915162726",
+    href: "https://wa.me/919815162726",
     icon: FaWhatsapp,
     color: "#25D366",
   },
@@ -90,11 +90,11 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-3">
             {/* Phone */}
             <a
-              href="tel:+918915162726"
+              href="tel:+919815162726"
               className="group flex items-center gap-3 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white font-black px-6 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] shadow-[0_6px_20px_rgba(255,107,43,0.3)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
             >
               <Phone size={14} />
-              +91-8915162726
+              +91-9815162726
             </a>
 
             {/* Quote */}
@@ -108,7 +108,7 @@ export default function Footer() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/918915162726"
+              href="https://wa.me/919815162726"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 hover:border-[#25D366] text-[#25D366] hover:text-white font-black px-5 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
@@ -139,12 +139,12 @@ export default function Footer() {
               <div className="relative z-10">
                 {/* Logo mark */}
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-[180px] h-auto shrink-0">
-                    <Image src="/logo.png" alt="Sai Baba Packers" width={180} height={54} className="object-contain w-full h-full" />
+                  <div className="w-[190px] h-auto shrink-0">
+                    <Image src="/logo.png" alt="Sai Baba Packers" width={190} height={60} className="object-contain w-full h-full" />
                   </div>
                 </div>
 
-                <p className="text-[13px] text-gray-600 leading-relaxed mb-6 max-w-[280px]">
+                <p className="text-[13px] text-white leading-relaxed mb-6 max-w-[280px]">
                   India's trusted relocation partner since 2010 — delivering
                   damage-free, on-time moves for 2,500+ families and businesses
                   across 50+ cities.
@@ -161,7 +161,7 @@ export default function Footer() {
                     <div key={s.l}
                       className="bg-white/[0.04] border border-white/6 rounded-lg px-3 py-1.5 flex items-center gap-1.5">
                       <span className="text-[#FF6B2B] font-black text-[12px] leading-none">{s.n}</span>
-                      <span className="text-gray-600 text-[9.5px] font-bold uppercase tracking-wider">{s.l}</span>
+                      <span className="text-white text-[9.5px] font-bold uppercase tracking-wider">{s.l}</span>
                     </div>
                   ))}
                 </div>
@@ -177,7 +177,7 @@ export default function Footer() {
                         aria-label={s.label}
                         target={s.href.startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
-                        className="group w-8 h-8 rounded-lg bg-white/[0.04] border border-white/6 flex items-center justify-center text-gray-600 transition-all duration-200 hover:scale-105"
+                        className="group w-8 h-8 rounded-lg bg-white/[0.04] border border-white/6 flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
                         onMouseEnter={e => {
                           (e.currentTarget as HTMLElement).style.background = s.color;
                           (e.currentTarget as HTMLElement).style.borderColor = s.color;
@@ -208,7 +208,7 @@ export default function Footer() {
                   <li key={l.label}>
                     <Link
                       href={l.href}
-                      className="group flex items-center gap-2 text-[12.5px] text-gray-600 hover:text-white transition-colors duration-200"
+                      className="group flex items-center gap-2 text-[12.5px] text-white hover:text-white transition-colors duration-200"
                     >
                       <ChevronRight
                         size={11}
@@ -232,7 +232,7 @@ export default function Footer() {
                   <li key={s.label}>
                     <Link
                       href={s.href}
-                      className="group flex items-center gap-2 text-[12.5px] text-gray-600 hover:text-white transition-colors duration-200"
+                      className="group flex items-center gap-2 text-[12.5px] text-white hover:text-white transition-colors duration-200"
                     >
                       <ChevronRight
                         size={11}
@@ -252,17 +252,31 @@ export default function Footer() {
                 Contact
               </h4>
 
-              {/* Phone */}
+              {/* Phone 1 */}
               <a
-                href="tel:+918915162726"
+                href="tel:+919815162726"
+                className="group flex items-center gap-3 mb-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B2B]/30 hover:bg-[#FF6B2B]/5 transition-all duration-200"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#FF6B2B]/15 flex items-center justify-center shrink-0">
+                  <Phone size={12} className="text-[#FF6B2B]" />
+                </div>
+                <div>
+                  <p className="text-[8.5px] font-black text-white uppercase tracking-wider">Call Us</p>
+                  <p className="text-[13px] font-black text-white">+91-9815162726</p>
+                </div>
+              </a>
+
+              {/* Phone 2 */}
+              <a
+                href="tel:+919833559269"
                 className="group flex items-center gap-3 mb-3 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B2B]/30 hover:bg-[#FF6B2B]/5 transition-all duration-200"
               >
                 <div className="w-7 h-7 rounded-lg bg-[#FF6B2B]/15 flex items-center justify-center shrink-0">
                   <Phone size={12} className="text-[#FF6B2B]" />
                 </div>
                 <div>
-                  <p className="text-[8.5px] font-black text-gray-600 uppercase tracking-wider">Call Us</p>
-                  <p className="text-[13px] font-black text-white">+91-8915162726</p>
+                  <p className="text-[8.5px] font-black text-white uppercase tracking-wider">Alternate</p>
+                  <p className="text-[13px] font-black text-white">+91-9833559269</p>
                 </div>
               </a>
 
@@ -275,7 +289,7 @@ export default function Footer() {
                   <Mail size={12} className="text-[#00B49C]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[8.5px] font-black text-gray-600 uppercase tracking-wider">Email Us</p>
+                  <p className="text-[8.5px] font-black text-white uppercase tracking-wider">Email Us</p>
                   <p className="text-[11px] font-bold text-gray-400 truncate">saibabamovers.chd@gmail.com</p>
                 </div>
               </a>
@@ -287,7 +301,7 @@ export default function Footer() {
                     <path d="M8 1L10 6H15L11 9.5L12.5 14.5L8 11.5L3.5 14.5L5 9.5L1 6H6L8 1Z" fill="#00B49C"/>
                   </svg>
                 </div>
-                <span className="text-[10px] font-black text-gray-500 uppercase tracking-wider">
+                <span className="text-[10px] font-black text-white uppercase tracking-wider">
                   ISO 9001:2015 Certified
                 </span>
               </div>
@@ -302,7 +316,7 @@ export default function Footer() {
       ══════════════════════════════════════ */}
       <div className="relative border-t border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 py-8">
-          <p className="text-[9.5px] font-black text-gray-600 uppercase tracking-[3px] mb-4">
+          <p className="text-[9.5px] font-black text-white uppercase tracking-[3px] mb-4">
             Our Branches
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -325,12 +339,12 @@ export default function Footer() {
                       {b.label}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-white/10" />
-                    <span className="text-[8.5px] font-bold text-gray-600 uppercase tracking-wider">
+                    <span className="text-[8.5px] font-bold text-white uppercase tracking-wider">
                       PIN {b.pin}
                     </span>
                   </div>
                   <p className="text-white text-[13px] font-black leading-tight mb-1">{b.area}</p>
-                  <p className="text-gray-600 text-[11.5px] leading-relaxed mb-3">{b.address}</p>
+                  <p className="text-white text-[11.5px] leading-relaxed mb-3">{b.address}</p>
                   <a
                     href={b.maps}
                     target="_blank"
@@ -351,13 +365,13 @@ export default function Footer() {
           ZONE 4 — Copyright bar
       ══════════════════════════════════════ */}
       <div className="border-t border-white/5">
-        <div className="max-w-[1200px] mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-gray-700">
+        <div className="max-w-[1200px] mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-white">
           <p>© 2019 Sai Baba Packers &amp; Movers. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="#" className="hover:text-gray-500 transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-gray-500 transition-colors">Terms of Use</Link>
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
             <p>
-              Powered by{" "}
+              Powered by:{" "}
               <a href="#" className="text-[#00B49C] hover:text-white transition-colors font-bold">
                 Future IT Touch Pvt. Ltd.
               </a>

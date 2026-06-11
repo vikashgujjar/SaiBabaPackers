@@ -5,7 +5,7 @@ const features = [
     icon:  Zap,
     stat:  "2×",
     title: "Faster Shifting",
-    desc:  "Swift scheduling and optimised loading crews cut your moving time in half versus the industry average.",
+    desc:  "Swift scheduling and optimised loading crews cut your home shifting or office relocation time in half versus the industry average.",
     accent: "#FF6B2B",
     tag:   "Speed",
   },
@@ -13,7 +13,7 @@ const features = [
     icon:  Shield,
     stat:  "100%",
     title: "Safe & Secure",
-    desc:  "Multi-layer premium packing — bubble wrap, foam corners, heavy-gauge cartons — for zero-damage delivery.",
+    desc:  "Multi-layer premium packing for all household goods — bubble wrap, foam corners, heavy-gauge cartons — for zero-damage delivery.",
     accent: "#00B49C",
     tag:   "Protection",
   },
@@ -21,7 +21,7 @@ const features = [
     icon:  Clock,
     stat:  "99%",
     title: "On-Time Guaranteed",
-    desc:  "Real-time route optimisation and pre-mapped logistics ensure punctual arrivals, every single time.",
+    desc:  "Real-time route optimisation ensures your goods reach the destination on schedule — every home move, office shift, or car transport.",
     accent: "#FF6B2B",
     tag:   "Punctuality",
   },
@@ -29,7 +29,7 @@ const features = [
     icon:  Headphones,
     stat:  "30min",
     title: "24/7 Support",
-    desc:  "Dedicated helpline with a 30-minute callback guarantee — available round-the-clock, every day of the year.",
+    desc:  "Dedicated helpline for all packing and moving queries — 30-minute callback guarantee, available round-the-clock, every day of the year.",
     accent: "#00B49C",
     tag:   "Support",
   },
@@ -55,7 +55,7 @@ export default function FeaturesStrip() {
       <div className="relative max-w-[1200px] mx-auto px-6">
         {/* 4-column strip — divided by vertical hairlines on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 divide-white/5 lg:divide-x lg:divide-y-0">
-          {features.map((f, i) => {
+          {features.map((f) => {
             const Icon = f.icon;
             return (
               <div
