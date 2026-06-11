@@ -424,7 +424,7 @@ export default async function ServiceDetailPage({
                       {r.label}
                     </h3>
                     <p className="text-[12.5px] text-gray-500 leading-relaxed flex-1 mb-4">
-                      {r.desc ?? r.intro.slice(0, 100) + "…"}
+                      {r.intro.slice(0, 100) + "…"}
                     </p>
                     <span className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider transition-colors duration-200" style={{ color: acc }}>
                       Learn More
