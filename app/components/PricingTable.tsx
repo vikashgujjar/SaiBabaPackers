@@ -31,7 +31,8 @@ export default function PricingTable() {
         </div>
 
         {/* Table */}
-        <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-[0_16px_60px_rgba(0,0,0,0.06)] mb-4">
+        <div className="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0 mb-4">
+          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-[0_16px_60px_rgba(0,0,0,0.06)] min-w-130">
           {/* Header row */}
           <div className="grid grid-cols-5 bg-[#1a1a2e]">
             <div className="px-5 py-4">
@@ -62,6 +63,7 @@ export default function PricingTable() {
               ))}
             </div>
           ))}
+          </div>
         </div>
 
         {/* Footnote */}

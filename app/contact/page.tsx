@@ -84,7 +84,7 @@ export default function ContactPage() {
           QUICK CONTACT STRIP
       ════════════════════════════════════════════ */}
       <section className="bg-[#1a1a2e] border-b border-white/5">
-        <div className="max-w-[1200px] mx-auto px-6 py-5">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-5">
           <div className="flex flex-wrap items-center gap-4 justify-between">
 
             {/* Phones */}
@@ -130,8 +130,8 @@ export default function ContactPage() {
       {/* ════════════════════════════════════════════
           MAIN CONTENT — form + info
       ════════════════════════════════════════════ */}
-      <section id="enquiry" className="bg-[#F7F4EE] py-20">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section id="enquiry" className="bg-[#F7F4EE] py-10 sm:py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-[1fr_420px] gap-6 items-start">
 
             {/* ── LEFT: Enquiry form ── */}
@@ -391,10 +391,10 @@ export default function ContactPage() {
       {/* ════════════════════════════════════════════
           OFFICE LOCATIONS
       ════════════════════════════════════════════ */}
-      <section className="bg-white py-20">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="bg-white py-10 sm:py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
             <div>
               <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
                 Find Us

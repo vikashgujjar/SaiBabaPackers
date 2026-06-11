@@ -52,7 +52,7 @@ export default function FeaturesStrip() {
         }}
       />
 
-      <div className="relative max-w-[1200px] mx-auto px-6">
+      <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* 4-column strip — divided by vertical hairlines on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 divide-white/5 lg:divide-x lg:divide-y-0">
           {features.map((f) => {

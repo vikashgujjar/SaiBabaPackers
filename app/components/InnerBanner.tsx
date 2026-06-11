@@ -31,7 +31,7 @@ export default function InnerBanner({
   const marqueeText = `${line1} ${line2} ${line3}`;
 
   return (
-    <section className="relative overflow-hidden bg-[#1a1a2e] min-h-[460px] lg:min-h-[520px] flex flex-col">
+    <section className="relative overflow-hidden bg-[#1a1a2e] min-h-[380px] sm:min-h-[420px] lg:min-h-[520px] flex flex-col">
 
       {/* ── Full-bleed background image ── */}
       <div className="absolute inset-0">
@@ -54,7 +54,7 @@ export default function InnerBanner({
           {[...Array(6)].map((_, i) => (
             <span
               key={i}
-              className="text-[130px] lg:text-[180px] font-black text-white uppercase tracking-tighter leading-none whitespace-nowrap px-8"
+              className="text-[70px] sm:text-[110px] lg:text-[180px] font-black text-white uppercase tracking-tighter leading-none whitespace-nowrap px-8"
             >
               {marqueeText} ·
             </span>
@@ -109,7 +109,7 @@ export default function InnerBanner({
 
       {/* ── Main content — centered vertically ── */}
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="max-w-[1200px] mx-auto px-6 w-full py-14 lg:py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-full py-10 sm:py-14 lg:py-20">
           <div className="max-w-[680px]">
 
             {/* Eyebrow */}
@@ -131,13 +131,13 @@ export default function InnerBanner({
 
             {/* Heading — stacked, large */}
             <h1 className="font-black uppercase tracking-tight mb-6 leading-[0.88]">
-              <span className="block text-[44px] sm:text-[58px] lg:text-[74px] text-white">
+              <span className="block text-[30px] sm:text-[44px] lg:text-[74px] text-white">
                 {line1}
               </span>
-              <span className="block text-[44px] sm:text-[58px] lg:text-[74px] text-[#FF6B2B]">
+              <span className="block text-[30px] sm:text-[44px] lg:text-[74px] text-[#FF6B2B]">
                 {line2}
               </span>
-              <span className="block text-[44px] sm:text-[58px] lg:text-[74px] text-white/50">
+              <span className="block text-[30px] sm:text-[44px] lg:text-[74px] text-white/50">
                 {line3}
               </span>
             </h1>

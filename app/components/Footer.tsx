@@ -100,7 +100,7 @@ export default function Footer() {
             {/* Quote */}
             <Link
               href="#quote"
-              className="group flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.10] border border-white/10 hover:border-white/20 text-white font-black px-6 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
+              className="hidden sm:flex group items-center gap-2 bg-white/[0.06] hover:bg-white/[0.10] border border-white/10 hover:border-white/20 text-white font-black px-6 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
             >
               Free Quote
               <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
@@ -111,7 +111,7 @@ export default function Footer() {
               href="https://wa.me/919815162726"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 hover:border-[#25D366] text-[#25D366] hover:text-white font-black px-5 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
+              className="hidden sm:flex group items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 hover:border-[#25D366] text-[#25D366] hover:text-white font-black px-5 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
             >
               <FaWhatsapp size={15} />
               WhatsApp
@@ -125,10 +125,10 @@ export default function Footer() {
       ══════════════════════════════════════ */}
       <div className="relative">
         <div className="max-w-[1200px] mx-auto px-6 py-14">
-          <div className="grid lg:grid-cols-[2.2fr_1fr_1fr_1.4fr] gap-10">
+          <div className="grid grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1.4fr] gap-8 lg:gap-10">
 
             {/* ── Brand column ── */}
-            <div className="relative">
+            <div className="relative col-span-2 lg:col-span-1">
               {/* Decorative large watermark */}
               <div
                 className="absolute -right-4 -top-4 text-[120px] font-black leading-none select-none pointer-events-none tracking-tighter opacity-[0.04] text-[#FF6B2B]"
@@ -246,7 +246,7 @@ export default function Footer() {
             </div>
 
             {/* ── Contact ── */}
-            <div>
+            <div className="col-span-2 lg:col-span-1">
               <h4 className="text-white text-[11px] font-black uppercase tracking-[2px] mb-5 flex items-center gap-2">
                 <span className="w-4 h-[2px] bg-[#FF6B2B] rounded-full" />
                 Contact

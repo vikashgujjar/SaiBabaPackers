@@ -50,7 +50,7 @@ export default function AboutUs() {
         <div className="absolute bottom-10 left-6 sm:left-10 lg:left-16 flex items-end gap-4">
           <div>
             <div
-              className="text-[96px] sm:text-[120px] lg:text-[150px] font-black leading-none tracking-tighter text-[#FF6B2B]"
+              className="text-[64px] sm:text-[96px] lg:text-[150px] font-black leading-none tracking-tighter text-[#FF6B2B]"
             >
               15+
             </div>
@@ -64,7 +64,7 @@ export default function AboutUs() {
       {/* ══════════════════════════════════════════
           CONTENT BLOCK — overlaps photo bottom
       ══════════════════════════════════════════ */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 -mt-6 lg:-mt-10 pb-10">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 -mt-6 lg:-mt-10 pb-10">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-5 items-start">
 
           {/* ── LEFT: Dark floating panel ── */}
@@ -80,13 +80,13 @@ export default function AboutUs() {
 
               {/* Headline — bold contrast treatment */}
               <h2 className="font-black uppercase leading-[1] tracking-tight mb-6">
-                <span className="block text-[38px] lg:text-[48px] text-white">
+                <span className="block text-[28px] sm:text-[34px] lg:text-[48px] text-white">
                   Relocating
                 </span>
-                <span className="block text-[38px] lg:text-[48px] text-white">
+                <span className="block text-[28px] sm:text-[34px] lg:text-[48px] text-white">
                   Lives With
                 </span>
-                <span className="block text-[38px] lg:text-[48px] text-[#FF6B2B]">
+                <span className="block text-[28px] sm:text-[34px] lg:text-[48px] text-[#FF6B2B]">
                   Care & Trust
                 </span>
               </h2>

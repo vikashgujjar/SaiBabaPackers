@@ -49,16 +49,16 @@ export default function LocationsSection() {
   const current = regions[active];
 
   return (
-    <section className="bg-[#F7F4EE] py-20 overflow-hidden relative">
+    <section className="bg-[#F7F4EE] py-10 sm:py-20 overflow-hidden relative">
 
       {/* Soft glow orbs */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF6B2B]/5 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00B49C]/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
         {/* ── Header ── */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
           <div>
             <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-3">
               Pan-India Coverage

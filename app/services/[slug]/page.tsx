@@ -82,9 +82,9 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             1. OVERVIEW  (image + intro)
         ══════════════════════════════════════════════ */}
-        <section className="bg-white py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="bg-white py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 items-center">
 
               {/* Image */}
               <div className="relative">
@@ -160,10 +160,10 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             2. WHAT'S INCLUDED
         ══════════════════════════════════════════════ */}
-        <section className="bg-[#F7F4EE] py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
+        <section className="bg-[#F7F4EE] py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
               <div>
                 <span className="block text-[10px] font-black uppercase tracking-[3px] mb-2" style={{ color: s.accent }}>
                   Full Scope
@@ -209,13 +209,13 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             3. PROCESS  (dark section)
         ══════════════════════════════════════════════ */}
-        <section className="bg-[#1a1a2e] py-20 relative overflow-hidden">
+        <section className="bg-[#1a1a2e] py-10 sm:py-20 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
           <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-[120px] pointer-events-none" style={{ background: `${s.accent}12` }} />
           <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-[#00B49C]/8 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-            <div className="text-center mb-14">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
+            <div className="text-center mb-8 sm:mb-14">
               <span className="block text-[10px] font-black uppercase tracking-[3px] mb-3" style={{ color: s.accent }}>
                 Step by Step
               </span>
@@ -247,9 +247,9 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             4. PRICING PREVIEW
         ══════════════════════════════════════════════ */}
-        <section className="bg-white py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <section className="bg-white py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-start">
 
               {/* Left — pricing table */}
               <div>
@@ -330,9 +330,9 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             5. FAQ
         ══════════════════════════════════════════════ */}
-        <section className="bg-[#F7F4EE] py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="grid lg:grid-cols-[380px_1fr] gap-12 items-start">
+        <section className="bg-[#F7F4EE] py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+            <div className="grid lg:grid-cols-[380px_1fr] gap-6 sm:gap-12 items-start">
 
               {/* Left heading */}
               <div className="lg:sticky lg:top-28">
@@ -386,8 +386,8 @@ export default async function ServiceDetailPage({
         {/* ══════════════════════════════════════════════
             6. RELATED SERVICES
         ══════════════════════════════════════════════ */}
-        <section className="bg-white py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
+        <section className="bg-white py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
               <div>
                 <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
@@ -441,7 +441,7 @@ export default async function ServiceDetailPage({
             7. SEO TAG CLOUD
         ══════════════════════════════════════════════ */}
         <section className="bg-[#fff] pb-10 pt-0">
-          <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
             <div className="bg-[#F7F4EE] border border-gray-100 rounded-2xl px-6 py-5">
               <p className="text-[9.5px] font-black text-gray-400 uppercase tracking-[2.5px] mb-4">Related Searches</p>
               <div className="flex flex-wrap gap-2">

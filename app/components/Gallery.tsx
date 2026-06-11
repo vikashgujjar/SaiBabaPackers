@@ -79,8 +79,8 @@ export default function Gallery() {
   function next() { setActive(i => (i + 1) % images.length); }
 
   return (
-    <section className="bg-[#1a1a2e] py-16 lg:py-20 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="bg-[#1a1a2e] py-10 sm:py-16 lg:py-20 overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
         {/* ── Header ── */}
         <div className="flex items-end justify-between gap-6 mb-8 flex-wrap">

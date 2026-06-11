@@ -114,7 +114,7 @@ export default function Hero() {
       {/* ══════════════════════════════
           HERO COPY — centred, full-bleed
       ══════════════════════════════ */}
-      <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-6 pt-8 pb-6 lg:pt-12 lg:pb-6 max-h-max">
+      <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-8 pb-6 lg:pt-12 lg:pb-6 max-h-max">
 
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-6 flex-wrap justify-center">
@@ -162,7 +162,7 @@ export default function Hero() {
               <div className="flex items-center gap-2 mb-3 flex-nowrap overflow-auto justify-start py-2 md:justify-center">
                 {MOVE_TYPES.map(t => (
                   <button key={t.id} type="button" onClick={() => setMoveType(t.id)}
-                    className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider border transition-all duration-200 ${
+                    className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-black uppercase text-nowrap tracking-wider border transition-all duration-200 ${
                       moveType === t.id
                         ? "bg-[#FF6B2B] border-[#FF6B2B] text-white shadow-[0_4px_14px_rgba(255,107,43,0.4)]"
                         : "bg-white/10 border-white/15 text-white/60 hover:bg-white/20 hover:text-white backdrop-blur-sm"

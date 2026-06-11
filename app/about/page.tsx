@@ -82,9 +82,9 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════
           1. COMPANY STORY
       ════════════════════════════════════════════ */}
-      <section id="story" className="bg-white py-20 overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section id="story" className="bg-white py-10 sm:py-20 overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 items-center">
 
             {/* Left — image with overlapping badges */}
             <div className="relative">
@@ -189,11 +189,11 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════
           2. MISSION & VISION
       ════════════════════════════════════════════ */}
-      <section className="bg-[#F7F4EE] py-20 relative overflow-hidden">
+      <section className="bg-[#F7F4EE] py-10 sm:py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B2B]/20 to-transparent" />
 
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
             <div>
               <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
                 What Drives Us
@@ -257,10 +257,10 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════
           3. SERVICES OVERVIEW
       ════════════════════════════════════════════ */}
-      <section className="bg-white py-20">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="bg-white py-10 sm:py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
             <div>
               <span className="block text-[10px] font-black text-[#FF6B2B] uppercase tracking-[3px] mb-2">
                 What We Do
@@ -311,9 +311,9 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════
           4. WHY CHOOSE US
       ════════════════════════════════════════════ */}
-      <section className="bg-[#F7F4EE] py-20 overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
+      <section className="bg-[#F7F4EE] py-10 sm:py-20 overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-start">
 
             {/* Left — checklist */}
             <div>
@@ -410,10 +410,10 @@ export default function AboutPage() {
       {/* ════════════════════════════════════════════
           5. SEO KEYWORD SECTION
       ════════════════════════════════════════════ */}
-      <section className="bg-white py-20">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="bg-white py-10 sm:py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
             <div>
               <span className="block text-[10px] font-black text-[#FF6B2B] uppercase tracking-[3px] mb-2">
                 Trusted Relocation Partner

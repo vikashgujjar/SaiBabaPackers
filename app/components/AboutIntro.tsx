@@ -31,12 +31,12 @@ const features = [
 
 export default function AboutIntro() {
   return (
-    <section className="bg-[#F7F4EE] py-20 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="bg-[#F7F4EE] py-10 sm:py-20 overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-[300px_1fr] gap-5 items-stretch">
 
           {/* ── LEFT: Brand intro with background photo ── */}
-          <div className="relative rounded-3xl overflow-hidden min-h-[380px] flex flex-col justify-between">
+          <div className="relative rounded-3xl overflow-hidden min-h-[260px] sm:min-h-[320px] lg:min-h-[380px] flex flex-col justify-between">
 
             {/* Background photo — team/warehouse */}
             <Image

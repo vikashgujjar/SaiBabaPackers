@@ -179,9 +179,9 @@ export default function ServicesPage() {
           const slug  = s.label.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 
           return (
-            <section key={s.label} id={slug} className={`${bg} py-20 overflow-hidden`}>
-              <div className="max-w-[1200px] mx-auto px-6">
-                <div className={`grid lg:grid-cols-2 gap-12 items-center ${odd ? "lg:[&>*:first-child]:order-2" : ""}`}>
+            <section key={s.label} id={slug} className={`${bg} py-10 sm:py-20 overflow-hidden`}>
+              <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+                <div className={`grid lg:grid-cols-2 gap-6 sm:gap-12 items-center ${odd ? "lg:[&>*:first-child]:order-2" : ""}`}>
 
                   {/* Image side */}
                   <div className="relative">
@@ -282,13 +282,13 @@ export default function ServicesPage() {
         {/* ══════════════════════════════════════════════
             3. HOW IT WORKS
         ══════════════════════════════════════════════ */}
-        <section className="bg-[#1a1a2e] py-20 relative overflow-hidden">
+        <section className="bg-[#1a1a2e] py-10 sm:py-20 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
           <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 bg-[#FF6B2B]/8 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-[#00B49C]/8 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-            <div className="text-center mb-14">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
+            <div className="text-center mb-8 sm:mb-14">
               <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-3">
                 Simple Process
               </span>
@@ -326,9 +326,9 @@ export default function ServicesPage() {
         {/* ══════════════════════════════════════════════
             4. WHY CHOOSE US
         ══════════════════════════════════════════════ */}
-        <section className="bg-[#F7F4EE] py-20 overflow-hidden">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <section className="bg-[#F7F4EE] py-10 sm:py-20 overflow-hidden">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-start">
 
               {/* Left */}
               <div>
@@ -425,10 +425,10 @@ export default function ServicesPage() {
         {/* ══════════════════════════════════════════════
             5. SEO KEYWORD CARDS
         ══════════════════════════════════════════════ */}
-        <section className="bg-white py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
+        <section className="bg-white py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
               <div>
                 <span className="block text-[10px] font-black text-[#FF6B2B] uppercase tracking-[3px] mb-2">
                   Service Coverage

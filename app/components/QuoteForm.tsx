@@ -31,8 +31,8 @@ export default function QuoteForm() {
     "w-full pl-10 pr-4 py-3.5 rounded-xl border border-gray-200 bg-[#F7F4EE] text-[13.5px] text-gray-700 placeholder:text-gray-300 focus:bg-white focus:border-[#FF6B2B] focus:outline-none focus:ring-2 focus:ring-[#FF6B2B]/10 transition-all";
 
   return (
-    <section id="quote" className="bg-white py-20 overflow-hidden">
-      <div className="max-w-[1100px] mx-auto px-6">
+    <section id="quote" className="bg-white py-10 sm:py-20 overflow-hidden">
+      <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1fr_420px] gap-5 items-stretch">
 
           {/* ── LEFT: Form card ── */}

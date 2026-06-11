@@ -77,11 +77,11 @@ export default function SeoContent() {
   const FeatIcon = featured.icon;
 
   return (
-    <section className="bg-white py-20 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="bg-white py-10 sm:py-20 overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
         {/* ── Header ── */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
           <div>
             <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
               Why Choose Us

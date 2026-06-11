@@ -68,7 +68,7 @@ function StatItem({ icon: Icon, target, label, accent }: typeof STATS[0]) {
       {/* Animated number */}
       <div className="flex items-end gap-0.5 mb-2">
         <span
-          className="text-[52px] lg:text-[64px] font-black leading-none tracking-tighter text-white"
+          className="text-[38px] sm:text-[48px] lg:text-[64px] font-black leading-none tracking-tighter text-white"
         >
           {value.toLocaleString()}
         </span>
@@ -101,7 +101,7 @@ export default function ClientsCounters() {
       {/* ══════════════════════════════════════
           TOP — dark stats band
       ══════════════════════════════════════ */}
-      <div className="bg-[#1a1a2e] relative overflow-hidden py-16 lg:py-20">
+      <div className="bg-[#1a1a2e] relative overflow-hidden py-10 sm:py-16 lg:py-20">
 
         {/* Grid texture */}
         <div
@@ -115,10 +115,10 @@ export default function ClientsCounters() {
         <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-[#FF6B2B]/10 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-[#00B49C]/8 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
           {/* Headline */}
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-14">
             <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-3">
               Our Network
             </span>
@@ -128,7 +128,7 @@ export default function ClientsCounters() {
           </div>
 
           {/* Stats row */}
-          <div className="flex flex-col sm:flex-row items-center divide-y sm:divide-y-0 sm:divide-x divide-white/8 gap-8 sm:gap-0">
+          <div className="grid grid-cols-2 sm:flex sm:flex-row items-center divide-white/8 sm:divide-x gap-8 sm:gap-0">
             {STATS.map(s => (
               <StatItem key={s.label} {...s} />
             ))}
@@ -147,7 +147,7 @@ export default function ClientsCounters() {
           BOTTOM — cream clients band
       ══════════════════════════════════════ */}
       <div className="bg-[#F7F4EE] pt-20 pb-16">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
           {/* Sub-header */}
           <div className="flex items-center justify-between gap-6 mb-8 flex-wrap">

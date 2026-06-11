@@ -44,8 +44,8 @@ export default function CtaBanner() {
       {/* Top hairline */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B2B]/40 to-transparent" />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-8 sm:gap-12 lg:gap-20 items-center">
 
           {/* ── LEFT: Main copy block ── */}
           <div>

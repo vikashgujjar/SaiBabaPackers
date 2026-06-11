@@ -72,7 +72,7 @@ export default function BranchesPage() {
           OVERVIEW STRIP
       ════════════════════════════════════════════ */}
       <section className="bg-white border-b border-gray-100">
-        <div className="max-w-[1200px] mx-auto px-6 py-10">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10">
           <div className="flex flex-wrap items-center justify-between gap-6">
             {/* Left: intro */}
             <div>
@@ -108,8 +108,8 @@ export default function BranchesPage() {
       {/* ════════════════════════════════════════════
           HQ BRANCHES — Chandigarh
       ════════════════════════════════════════════ */}
-      <section className="bg-[#F7F4EE] py-16">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="bg-[#F7F4EE] py-8 sm:py-16">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
           <div className="mb-8">
             <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
               Headquarters
@@ -194,9 +194,9 @@ export default function BranchesPage() {
       {regions.map((region, ri) => (
         <section
           key={region.label}
-          className={ri % 2 === 0 ? "bg-white py-16" : "bg-[#F7F4EE] py-16"}
+          className={ri % 2 === 0 ? "bg-white py-8 sm:py-16" : "bg-[#F7F4EE] py-8 sm:py-16"}
         >
-          <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
             {/* Region header */}
             <div className="flex items-end justify-between gap-6 mb-8 flex-wrap">

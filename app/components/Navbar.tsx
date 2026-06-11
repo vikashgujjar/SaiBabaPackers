@@ -75,7 +75,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Dropdown panel — shown on hover via CSS */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden z-50
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[min(520px,90vw)] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden z-50
                   opacity-0 invisible translate-y-2
                   group-hover/services:opacity-100 group-hover/services:visible group-hover/services:translate-y-0
                   transition-all duration-200 ease-out">

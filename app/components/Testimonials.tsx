@@ -67,16 +67,16 @@ export default function Testimonials() {
   const others   = testimonials.filter((_, i) => i !== active);
 
   return (
-    <section className="bg-[#FFF8F3] py-20 overflow-hidden relative">
+    <section className="bg-[#FFF8F3] py-10 sm:py-20 overflow-hidden relative">
 
       {/* Soft decorative orbs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF6B2B]/6 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#00B49C]/6 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
         {/* ── Header ── */}
-        <div className="flex items-end justify-between gap-6 mb-12 flex-wrap">
+        <div className="flex items-end justify-between gap-4 mb-6 sm:mb-12 flex-wrap">
           <div>
             <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-2">
               Customer Stories
@@ -108,7 +108,7 @@ export default function Testimonials() {
 
           {/* ══ FEATURED TESTIMONIAL ══ */}
           <div
-            className="relative bg-white border border-orange-100 rounded-3xl p-8 lg:p-10 overflow-hidden flex flex-col justify-between min-h-[340px] shadow-[0_8px_40px_rgba(255,107,43,0.07)] transition-opacity duration-280"
+            className="relative bg-white border border-orange-100 rounded-3xl p-6 sm:p-8 lg:p-10 overflow-hidden flex flex-col justify-between min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] shadow-[0_8px_40px_rgba(255,107,43,0.07)] transition-opacity duration-280"
             style={{ opacity: animating ? 0 : 1 }}
           >
             {/* Giant decorative quote mark */}
@@ -138,7 +138,7 @@ export default function Testimonials() {
             </div>
 
             {/* Quote */}
-            <blockquote className="flex-1 text-[17px] lg:text-[19px] font-semibold text-[#1a1a2e] leading-[1.7] relative z-10 mb-8">
+            <blockquote className="flex-1 text-[14px] sm:text-[16px] lg:text-[19px] font-semibold text-[#1a1a2e] leading-[1.7] relative z-10 mb-6 sm:mb-8">
               &ldquo;{featured.text}&rdquo;
             </blockquote>
 
