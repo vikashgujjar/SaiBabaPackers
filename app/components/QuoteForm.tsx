@@ -46,7 +46,7 @@ export default function QuoteForm() {
           from:         form.from,
           to:           form.to,
           message:      form.message,
-          mail_to:      "www.vgujjar1234@gmail.com",
+          mail_to:      "saibabamovers.chd@gmail.com",
         }),
       });
       if (res.ok) {

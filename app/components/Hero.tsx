@@ -112,7 +112,7 @@ export default function Hero() {
           to,
           date:         date || "Not specified",
           message,
-          mail_to:      "www.vgujjar1234@gmail.com",
+          mail_to:      "saibabamovers.chd@gmail.com",
         }),
       });
       if (res.ok) {
