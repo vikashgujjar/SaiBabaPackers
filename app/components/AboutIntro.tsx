@@ -82,7 +82,7 @@ export default function AboutIntro() {
                   ))}
                 </div>
                 <Link
-                  href="#about"
+                  href="/about"
                   className="group inline-flex items-center gap-2 text-[#FF6B2B] hover:text-white font-black text-[11px] uppercase tracking-[2px] transition-colors duration-200"
                 >
                   More About Us
@@ -140,7 +140,7 @@ export default function AboutIntro() {
                       {f.desc}
                     </p>
                     <Link
-                      href="#services"
+                      href="/services"
                       className="group/link inline-flex items-center gap-1.5 text-[10.5px] font-black uppercase tracking-wider transition-colors duration-200"
                       style={{ color: f.accent }}
                     >

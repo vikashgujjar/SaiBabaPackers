@@ -156,7 +156,7 @@ export default function ServicesPage() {
           eyebrow="What We Offer"
           headingLines={["Our", "Relocation", "Services"]}
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
-          primaryCta={{ label: "Get Free Quote", href: "/#quote" }}
+          primaryCta={{ label: "Get Free Quote", href: "/contact" }}
           description={
             <>
               <strong className="text-white font-bold">Home shifting</strong>,{" "}
@@ -265,7 +265,7 @@ export default function ServicesPage() {
                         <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                       </Link>
                       <Link
-                        href="/#quote"
+                        href="/contact"
                         className="flex items-center gap-2 bg-transparent hover:bg-gray-50 border border-gray-200 text-gray-600 font-black uppercase text-[11px] tracking-[2px] px-6 py-3.5 rounded-xl transition-all duration-200"
                       >
                         Free Quote

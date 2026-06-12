@@ -64,7 +64,7 @@ export default function BranchesPage() {
         eyebrow="Pan-India Network"
         headingLines={["Our", "Branches", "& Coverage"]}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Branches" }]}
-        primaryCta={{ label: "Get a Quote", href: "/#quote" }}
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
         description="Sai Baba Packers & Movers operates across India — from Chandigarh to Chennai, Delhi to Guwahati. Find your city and get a free shifting quote."
       />
 
@@ -127,6 +127,7 @@ export default function BranchesPage() {
                 address: "Plot No. 2212/6, Pipliwala Town, Road Near Foji Dhaba",
                 pin:     "160101",
                 phone:   "+91-9815162726",
+                mapsUrl: "https://www.google.com/maps/search/Sai+Baba+Packers+Movers+Pipliwala+Town+Chandigarh",
               },
               {
                 label:   "Branch 02 — Manimajra",
@@ -134,13 +135,14 @@ export default function BranchesPage() {
                 address: "Shop No. 238, Old Ropar Road, Near Police Station, Manimajra",
                 pin:     "160101",
                 phone:   "+91-9833559269",
+                mapsUrl: "https://www.google.com/maps/search/Old+Ropar+Road+Near+Police+Station+Manimajra+Chandigarh",
               }
             ].map((b) => (
               <div
                 key={b.label}
                 className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 relative"
               >
-                {/* Top accent bar */}Free Consultation
+               
                 <div className="h-[3px] w-full bg-gradient-to-r from-[#FF6B2B] to-[#00B49C]" />
 
                 <div className="p-7">
@@ -170,15 +172,6 @@ export default function BranchesPage() {
                     >
                       <Phone size={12} />
                       {b.phone}
-                    </a>
-                    <a
-                      href="https://maps.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-[11px] font-black text-[#00B49C] uppercase tracking-wider hover:underline transition-colors duration-200"
-                    >
-                      <MapPin size={11} />
-                      View on Maps
                     </a>
                   </div>
                 </div>
@@ -236,9 +229,10 @@ export default function BranchesPage() {
             {/* City pills grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {region.cities.map((city) => (
-                <div
+                <Link
                   key={city}
-                  className="group relative bg-white border border-gray-100 rounded-2xl px-4 py-4 flex items-center gap-3 hover:border-transparent hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-200 overflow-hidden cursor-default"
+                  href={`/contact?city=${encodeURIComponent(city)}`}
+                  className="group relative bg-white border border-gray-100 rounded-2xl px-4 py-4 flex items-center gap-3 hover:border-transparent hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-200 overflow-hidden"
                 >
                   {/* Accent bar on hover */}
                   <div
@@ -255,12 +249,12 @@ export default function BranchesPage() {
                   <span className="text-[12.5px] font-black text-[#1a1a2e] uppercase tracking-wide leading-tight">
                     {city}
                   </span>
-                </div>
+                </Link>
               ))}
 
               {/* Get Quote card — last item */}
               <Link
-                href="/#quote"
+                href="/contact"
                 className="group relative bg-[#1a1a2e] border border-[#1a1a2e] rounded-2xl px-4 py-4 flex items-center gap-3 hover:bg-[#FF6B2B] hover:border-[#FF6B2B] transition-all duration-200 overflow-hidden"
               >
                 <div className="w-7 h-7 rounded-lg bg-white/10 group-hover:bg-white/20 flex items-center justify-center shrink-0 transition-colors duration-200">

@@ -99,7 +99,7 @@ export default function Footer() {
 
             {/* Quote */}
             <Link
-              href="#quote"
+              href="/contact"
               className="hidden sm:flex group items-center gap-2 bg-white/[0.06] hover:bg-white/[0.10] border border-white/10 hover:border-white/20 text-white font-black px-6 py-3.5 rounded-xl text-[12px] uppercase tracking-[2px] transition-all duration-200"
             >
               Free Quote

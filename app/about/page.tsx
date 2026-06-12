@@ -175,7 +175,7 @@ export default function AboutPage() {
               </div>
 
               <Link
-                href="/#services"
+                href="/services"
                 className="group inline-flex items-center gap-2 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white font-black uppercase text-[11px] tracking-[2px] px-6 py-3.5 rounded-xl shadow-[0_8px_24px_rgba(255,107,43,0.3)] hover:-translate-y-0.5 transition-all duration-200"
               >
                 Explore Our Services
@@ -270,7 +270,7 @@ export default function AboutPage() {
               </h2>
             </div>
             <Link
-              href="/#services"
+              href="/services"
               className="group self-start flex items-center gap-2 border border-gray-200 hover:border-[#FF6B2B] text-gray-500 hover:text-[#FF6B2B] font-black uppercase text-[11px] tracking-[2px] px-5 py-3 rounded-xl transition-all duration-200"
             >
               View All Services
@@ -394,7 +394,7 @@ export default function AboutPage() {
                     <Phone size={13} /> Call Now
                   </a>
                   <Link
-                    href="/#quote"
+                    href="/contact"
                     className="group flex items-center gap-2 bg-white/[0.07] hover:bg-white/[0.13] border border-white/10 text-white font-black uppercase text-[11px] tracking-[2px] px-5 py-3.5 rounded-xl transition-all duration-200"
                   >
                     Free Quote

@@ -77,6 +77,7 @@ export default async function ServiceDetailPage({
           ]}
           primaryCta={{ label: "Get Free Quote", href: "/#quote" }}
           description={<>{s.tagline} — trusted by 2,500+ families across 50+ Indian cities.</>}
+          showQuoteForm={true}
         />
 
         {/* ══════════════════════════════════════════════

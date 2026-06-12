@@ -113,7 +113,7 @@ export default function AboutUs() {
               </p> */}
 
               <Link
-                href="#services"
+                href="/services"
                 className="group inline-flex items-center gap-2.5 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white px-7 py-4 rounded-xl font-black uppercase text-[11.5px] tracking-[2px] shadow-[0_8px_24px_rgba(255,107,43,0.3)] hover:shadow-[0_12px_32px_rgba(255,107,43,0.45)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
               >
                 Explore Our Services

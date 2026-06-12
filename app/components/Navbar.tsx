@@ -159,7 +159,7 @@ export default function Navbar() {
             +91-9815162726
           </a>
           <Link
-            href="/#quote"
+            href="/contact"
             className="group flex items-center gap-2 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white text-[11px] font-black px-5 py-2.5 rounded-lg uppercase tracking-[1.5px] shadow-[0_4px_14px_rgba(255,107,43,0.3)] hover:shadow-[0_6px_20px_rgba(255,107,43,0.45)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
             <span>Free Quote</span>

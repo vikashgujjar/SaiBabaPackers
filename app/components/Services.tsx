@@ -192,7 +192,7 @@ export default function Services() {
                   Get a Quote for This
                   <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                 </Link>
-                <Link href="#contact" className="text-[11.5px] font-bold text-gray-400 hover:text-[#1a1a2e] uppercase tracking-wider transition-colors duration-200">
+                <Link href="/contact" className="text-[11.5px] font-bold text-gray-400 hover:text-[#1a1a2e] uppercase tracking-wider transition-colors duration-200">
                   Ask a Question →
                 </Link>
               </div>

@@ -466,16 +466,6 @@ export default function ContactPage() {
                         {p.number}
                       </a>
                     ))}
-                    <a
-                      href={o.maps}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider transition-colors duration-200"
-                      style={{ color: o.accent }}
-                    >
-                      <MapPin size={11} />
-                      View on Maps
-                    </a>
                   </div>
                 </div>
               </div>
