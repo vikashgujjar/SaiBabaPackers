@@ -41,15 +41,15 @@ export default function Navbar() {
   return (
     <nav className={`sticky top-0 z-50 w-full transition-all duration-500 ${
       scrolled
-        ? "bg-white/95 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-2.5 border-b border-gray-100"
-        : "bg-white py-4 border-b border-gray-100"
+        ? "bg-white/95 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-1 border-b border-gray-100"
+        : "bg-white py-1 border-b border-gray-100"
     }`}>
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between gap-6">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group">
-          <div className="relative w-[190px] h-auto shrink-0">
-            <Image src="/logo.png" alt="Sai Baba Packers" width={190} height={60} className="object-contain w-full h-full" />
+          <div className="relative w-[240px] h-auto shrink-0">
+            <Image src="/logo.png" alt="Sai Baba Packers" width={240} height={120} className="object-contain w-full h-full" />
           </div>
         </Link>
 

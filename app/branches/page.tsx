@@ -22,7 +22,7 @@ const regions = [
       "Chandigarh", "Delhi", "Noida", "Gurgaon", "Faridabad",
       "Ghaziabad", "Vaishali", "Indirapuram", "Ambala", "Patiala",
       "Amritsar", "Ludhiana", "Dehradun", "Lucknow", "Kanpur",
-      "Varanasi", "Agra", "Jaipur",
+      "Varanasi", "Agra", "Jaipur","Chandigarh","Panchkula","Mohali","Himachal Pradesh",
     ],
   },
   {
@@ -60,7 +60,7 @@ export default function BranchesPage() {
   return (
     <>
       <InnerBanner
-        image="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1920&q=90"
+        image="/InnerBanners/branches.webp"
         eyebrow="Pan-India Network"
         headingLines={["Our", "Branches", "& Coverage"]}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Branches" }]}

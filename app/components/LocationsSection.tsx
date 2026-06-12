@@ -10,7 +10,7 @@ const regions = [
     count:  15,
     cities: [
       "Delhi", "Noida", "Gurgaon", "Faridabad", "Jaipur", "Agra",
-      "Lucknow", "Kanpur", "Meerut", "Chandigarh", "Ludhiana", "Amritsar",
+      "Lucknow", "Kanpur", "Meerut", "Chandigarh","Panchkula","Mohali","Himachal Pradesh", "Ludhiana", "Amritsar",
       "Dehradun", "Ambala", "Patiala",
     ],
   },

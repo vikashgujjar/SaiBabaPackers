@@ -13,7 +13,7 @@ const services = [
     tag:    "Most Popular",
     desc:   "Our trained packers use material-specific techniques — bubble wrap for fragile items, foam corner guards for furniture, vacuum bags for soft furnishings. Every item is inventoried before the truck moves.",
     points: ["Custom-spec wrapping per item type", "Full inventory list provided", "Unpacking & placement at destination", "Disposal of all packing material"],
-    image:  "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=900&q=85",
+    image:  "/Services/packing&unpacking.webp",
     accent: "#FF6B2B",
   },
   {
@@ -23,7 +23,7 @@ const services = [
     tag:    null,
     desc:   "Our warehouses are CCTV-monitored 24/7, pest-treated monthly, and items are catalogued and retrievable on 24-hour notice. Climate controlled for both short and long-term storage.",
     points: ["Climate & humidity controlled", "24/7 CCTV + security guard", "Monthly pest control treatment", "24-hr retrieval on demand"],
-    image:  "https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&q=85",
+    image:  "/Services/warehousing.webp",
     accent: "#00B49C",
   },
   {
@@ -33,7 +33,7 @@ const services = [
     tag:    null,
     desc:   "Our crew uses structural ramps, furniture dollies, and load-strap harnesses to prevent any damage. Padded floor runners and door guards keep your home scratch-free throughout.",
     points: ["Padded floor runners & door guards", "Hydraulic lift for heavy appliances", "Pre-move walkthrough & damage check", "Crew of 3–6 based on move size"],
-    image:  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85",
+    image:  "/Services/loading&unloading.webp",
     accent: "#FF6B2B",
   },
   {
@@ -43,7 +43,7 @@ const services = [
     tag:    "Most Requested",
     desc:   "From disassembly of modular furniture to reassembly and wall-mounting at the new place — we handle every stage. One dedicated supervisor manages your move from first call to final sign-off.",
     points: ["Dedicated move supervisor", "Furniture disassembly & reassembly", "Appliance disconnect & reconnect", "Post-move cleaning crew optional"],
-    image:  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85",
+    image:  "/Services/home-shifting.webp",
     accent: "#00B49C",
   },
   {
@@ -53,7 +53,7 @@ const services = [
     tag:    null,
     desc:   "Multi-car enclosed carriers and custom-built bike cradles transport your vehicles without a single kilometre added to the odometer. Pre and post delivery inspection reports provided.",
     points: ["Enclosed carrier transport", "Zero-odometer-reading policy", "Pre & post delivery inspection report", "Full transit insurance included"],
-    image:  "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=900&q=85",
+    image:  "/Services/car-relocation.webp",
     accent: "#FF6B2B",
   },
   {
@@ -63,7 +63,7 @@ const services = [
     tag:    null,
     desc:   "We move offices over weekends or nights so your operations resume Monday morning. IT equipment, server racks, workstations, and filing systems handled by specialists.",
     points: ["Weekend & after-hours scheduling", "IT & server rack specialists", "Department-labelled system", "Business continuity guaranteed"],
-    image:  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85",
+    image:  "/Services/office-relocation.webp",
     accent: "#00B49C",
   },
 ];

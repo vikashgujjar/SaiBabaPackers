@@ -61,7 +61,7 @@ export default function AboutPage() {
   return (
     <>
       <InnerBanner
-        image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=90"
+        image="/InnerBanners/aboutBanner.webp"
         eyebrow="Who We Are"
         headingLines={["Sai Baba", "Packers &", "Movers"]}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}

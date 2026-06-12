@@ -25,7 +25,7 @@ const services = [
     label:   "Home Shifting Services",
     eyebrow: "Household Relocation",
     accent:  "#FF6B2B",
-    image:   "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80",
+    image:   "/InnerServices/homeShifting.png",
     desc:    "Moving your home is more than transporting boxes — it's moving your life. Our home shifting specialists handle every step from furniture disassembly, material-specific packaging, and safe loading to GPS-tracked transport, unloading, and reassembly at the new address.",
     points:  [
       "Door-to-door service — pickup to placement",
@@ -41,7 +41,7 @@ const services = [
     label:   "Office Relocation",
     eyebrow: "Commercial Moving",
     accent:  "#00B49C",
-    image:   "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+    image:   "/InnerServices/officeShifting.png",
     desc:    "Business downtime costs money. Our commercial relocation team plans every move around your schedule — weekend and after-hours shifts, labelled inventory lists, IT equipment crating, and same-day setup at the new premises so operations resume the next morning.",
     points:  [
       "Zero-downtime weekend & after-hours scheduling",
@@ -57,7 +57,7 @@ const services = [
     label:   "Car Relocation Services",
     eyebrow: "Vehicle Transport",
     accent:  "#FF6B2B",
-    image:   "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80",
+    image:   "/InnerServices/carTransport.png",
     desc:    "Your car travels in an enclosed carrier — zero kilometres added to the odometer. We conduct a pre-loading condition inspection and provide a delivery report on arrival. Bikes travel on custom cradles with anti-scratch padding and full transit insurance.",
     points:  [
       "Enclosed carrier — zero odometer reading added",
@@ -73,7 +73,7 @@ const services = [
     label:   "Warehousing Services",
     eyebrow: "Storage Solutions",
     accent:  "#00B49C",
-    image:   "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80",
+    image:   "/InnerServices/whereHouse.png",
     desc:    "Between homes or waiting on possession? Our warehousing facilities are 24/7 CCTV-monitored, climate-controlled, and pest-treated monthly. Every item is logged in our inventory system — retrievable within 24 hours' notice. Plans from 7 days to 7 months.",
     points:  [
       "24/7 CCTV monitoring & alarm systems",
@@ -89,7 +89,7 @@ const services = [
     label:   "Packaging & Unpacking",
     eyebrow: "Packing Services",
     accent:  "#FF6B2B",
-    image:   "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=900&q=80",
+    image:   "/InnerServices/packingUnpacking.png",
     desc:    "Not all items pack the same. Electronics get anti-static wrap and foam inserts. Glassware goes in cell-divider cartons. Sofas and mattresses get stretch-film covers. Our team labels every box with contents and destination room — so unpacking is just as smooth.",
     points:  [
       "Material-specific wrapping for every item type",
@@ -105,7 +105,7 @@ const services = [
     label:   "Loading & Unloading",
     eyebrow: "Labour Services",
     accent:  "#00B49C",
-    image:   "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=80",
+    image:   "/InnerServices/loadingUnloading.png",
     desc:    "Heavy lifting done right. Our loading crew uses hydraulic trolleys, padded floor runners, and door-frame guards to protect both your belongings and the property. Every piece is strapped and secured in the vehicle before departure — nothing shifts in transit.",
     points:  [
       "Hydraulic trolleys for heavy furniture & appliances",
@@ -152,7 +152,7 @@ export default function ServicesPage() {
 
         {/* ══ BANNER ══ */}
         <InnerBanner
-          image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=90"
+          image="/banner/BannerOne.webp"
           eyebrow="What We Offer"
           headingLines={["Our", "Relocation", "Services"]}
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}

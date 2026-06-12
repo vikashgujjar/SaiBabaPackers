@@ -1,22 +1,24 @@
 import { Home, Building2, Car, Warehouse, Package, Truck, LucideIcon } from "lucide-react";
 
 export interface ServiceData {
-  slug:       string;
-  icon:       LucideIcon;
-  label:      string;
-  eyebrow:    string;
-  accent:     string;
-  image:      string;
-  bannerImg:  string;
-  tagline:    string;
-  metaDesc:   string;
-  intro:      string;
-  included:   { title: string; desc: string }[];
-  process:    { n: string; title: string; desc: string }[];
-  faqs:       { q: string; a: string }[];
-  stat:       { n: string; l: string };
-  pricing:    { label: string; from: string }[];
-  seoTags:    string[];
+  slug:         string;
+  icon:         LucideIcon;
+  label:        string;
+  eyebrow:      string;
+  accent:       string;
+  image:        string;
+  bannerImg:    string;
+  tagline:      string;
+  metaDesc:     string;
+  intro:        string;
+  included:     { title: string; desc: string }[];
+  process:      { n: string; title: string; desc: string }[];
+  faqs:         { q: string; a: string }[];
+  stat:         { n: string; l: string };
+  pricing:      { label: string; from: string }[];
+  seoTags:      string[];
+  serviceAreas: string[];
+  seoBlocks:    { heading: string; body: string }[];
 }
 
 const serviceList: ServiceData[] = [
@@ -26,8 +28,8 @@ const serviceList: ServiceData[] = [
     label:     "Home Shifting Services",
     eyebrow:   "Household Relocation",
     accent:    "#FF6B2B",
-    image:     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=90",
+    image:     "/InnerServices/homeShifting.png",
+    bannerImg: "/InnerServices/homeShifting.png",
     tagline:   "Complete Door-to-Door Home Relocation",
     metaDesc:  "Professional home shifting services in Chandigarh. Sai Baba Packers & Movers handles packing, loading, transport & unpacking for 1BHK to 5BHK moves across India.",
     intro:
@@ -56,13 +58,19 @@ const serviceList: ServiceData[] = [
     ],
     stat:    { n: "2,500+", l: "Homes Shifted" },
     pricing: [
-      { label: "1 BHK Local (within city)",  from: "₹4,000" },
-      { label: "2 BHK Local",                from: "₹6,500" },
-      { label: "3 BHK Local",                from: "₹9,500" },
-      { label: "1 BHK Intercity (up to 500km)", from: "₹12,000" },
-      { label: "2 BHK Intercity",            from: "₹18,000" },
+      { label: "1 BHK Local (within city)",        from: "₹4,000" },
+      { label: "2 BHK Local",                      from: "₹6,500" },
+      { label: "3 BHK Local",                      from: "₹9,500" },
+      { label: "1 BHK Intercity (up to 500km)",    from: "₹12,000" },
+      { label: "2 BHK Intercity",                  from: "₹18,000" },
     ],
     seoTags: ["Home Shifting Chandigarh", "Household Relocation", "Packers Movers Chandigarh", "1BHK Shifting", "2BHK Shifting", "Intercity Home Shifting"],
+    serviceAreas: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Delhi NCR", "Mumbai", "Bangalore", "Hyderabad", "Pune", "Jaipur", "Lucknow", "Amritsar", "Ludhiana", "Jalandhar", "Ambala"],
+    seoBlocks: [
+      { heading: "Home Shifting in Chandigarh & Tricity",  body: "Sai Baba Packers & Movers is Chandigarh's most trusted home shifting company, covering Mohali, Panchkula, and Zirakpur. Whether you're moving a compact 1BHK or a full 5BHK, our trained crew handles every room — packing, loading, GPS-tracked transport, and reassembly at the new address." },
+      { heading: "Intercity Home Shifting Across India",   body: "Our intercity home shifting connects Chandigarh to Delhi NCR, Mumbai, Bangalore, Hyderabad, Pune, and 50+ cities across India. All intercity moves include fixed-price quotes, a dedicated vehicle, and comprehensive transit insurance — no surprises on delivery day." },
+      { heading: "1BHK to 5BHK — All Home Sizes Covered", body: "From a single-room studio to a 5BHK bungalow with antiques and modular kitchens, our home shifting team scales to every move. Right-sized vehicles, correct crew strength, and a dedicated relocation manager are assigned from the moment you book." },
+    ],
   },
 
   {
@@ -71,8 +79,8 @@ const serviceList: ServiceData[] = [
     label:     "Office Relocation",
     eyebrow:   "Commercial Moving",
     accent:    "#00B49C",
-    image:     "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=90",
+    image:     "/InnerServices/officeShifting.png",
+    bannerImg: "/InnerServices/officeShifting.png",
     tagline:   "Zero-Downtime Commercial Relocation",
     metaDesc:  "Expert office relocation services in Chandigarh. Sai Baba Packers & Movers handles workstations, IT equipment & commercial furniture with zero business downtime.",
     intro:
@@ -101,12 +109,18 @@ const serviceList: ServiceData[] = [
     ],
     stat:    { n: "500+", l: "Offices Relocated" },
     pricing: [
-      { label: "Small Office (up to 10 seats)",   from: "₹15,000" },
-      { label: "Medium Office (11–30 seats)",     from: "₹30,000" },
-      { label: "Large Office (30+ seats)",        from: "Custom Quote" },
-      { label: "Intercity Office Relocation",     from: "Custom Quote" },
+      { label: "Small Office (up to 10 seats)",    from: "₹15,000" },
+      { label: "Medium Office (11–30 seats)",      from: "₹30,000" },
+      { label: "Large Office (30+ seats)",         from: "Custom Quote" },
+      { label: "Intercity Office Relocation",      from: "Custom Quote" },
     ],
     seoTags: ["Office Relocation Chandigarh", "Commercial Moving", "Office Shifting Chandigarh", "IT Equipment Moving", "Workstation Relocation"],
+    serviceAreas: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Delhi NCR", "Mumbai", "Bangalore", "Hyderabad", "Pune", "Chennai", "Kolkata", "Ahmedabad"],
+    seoBlocks: [
+      { heading: "Office Relocation in Chandigarh Tricity", body: "Sai Baba Packers & Movers specialises in commercial office relocation across Chandigarh, Mohali, and Panchkula. From 10-seat startups to 200-seat enterprises, our team creates a detailed move plan, manages IT equipment packing, and completes full setup before your staff walks in on Monday." },
+      { heading: "Weekend & After-Hours Office Moves",      body: "Business continuity is our priority. All commercial moves are scheduled after office hours or over weekends so your operations face zero disruption. Our crew works overnight if needed — packing, transport, and workstation setup all done in a single window." },
+      { heading: "IT Equipment & Server Room Relocation",   body: "Servers, UPS units, networking racks, and individual desktops are packed by IT-trained crew using anti-static materials and custom shock-padded crates. Every cable is labelled, and IT gear is placed at the correct desk at the new premises for instant startup." },
+    ],
   },
 
   {
@@ -115,8 +129,8 @@ const serviceList: ServiceData[] = [
     label:     "Car Relocation Services",
     eyebrow:   "Vehicle Transport",
     accent:    "#FF6B2B",
-    image:     "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1920&q=90",
+    image:     "/InnerServices/carTransport.png",
+    bannerImg: "/InnerServices/carTransport.png",
     tagline:   "Safe Car & Bike Transport Across India",
     metaDesc:  "Trusted car relocation services from Chandigarh. Enclosed carriers, zero odometer, transit insurance & inspection reports for cars and bikes across 50+ cities.",
     intro:
@@ -152,6 +166,12 @@ const serviceList: ServiceData[] = [
       { label: "Bike Transport",            from: "₹3,500" },
     ],
     seoTags: ["Car Relocation Chandigarh", "Vehicle Transport India", "Bike Transport Chandigarh", "Car Carrier Service", "Auto Transport Chandigarh"],
+    serviceAreas: ["Delhi NCR", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata", "Jaipur", "Lucknow", "Surat", "Kochi", "Nagpur", "Bhopal", "Indore"],
+    seoBlocks: [
+      { heading: "Car Transport from Chandigarh to All Metros", body: "We transport cars from Chandigarh to Delhi NCR (1–2 days), Mumbai (3–4 days), Bangalore (5–6 days), and all Indian metros. Every vehicle travels in an enclosed carrier — zero odometer reading added, zero exposure to road weather — with a full condition inspection report at pickup and delivery." },
+      { heading: "Two-Wheeler & Bike Transport Chandigarh",     body: "Motorcycles, scooters, and superbikes are transported on custom metal cradles with rubber padding — no chain ties that scratch the frame. Our bike transport service from Chandigarh covers all major cities with full transit insurance and doorstep delivery." },
+      { heading: "Luxury & Modified Car Relocation",            body: "We have experience transporting lowered cars, sports cars, vintage vehicles, and large SUVs. High-value vehicles receive a more detailed inspection, custom blocking inside the carrier, and direct contact with the transport supervisor throughout the journey." },
+    ],
   },
 
   {
@@ -160,8 +180,8 @@ const serviceList: ServiceData[] = [
     label:     "Warehousing Services",
     eyebrow:   "Storage Solutions",
     accent:    "#00B49C",
-    image:     "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=90",
+    image:     "/InnerServices/whereHouse.png",
+    bannerImg: "/InnerServices/whereHouse.png",
     tagline:   "Secure, Monitored Storage — 7 Days to 7 Months",
     metaDesc:  "Safe warehousing & storage services in Chandigarh. 24/7 CCTV, climate-controlled, pest-treated units. Short-term and long-term storage for households and businesses.",
     intro:
@@ -190,13 +210,19 @@ const serviceList: ServiceData[] = [
     ],
     stat:    { n: "10,000+", l: "sq. ft. Storage" },
     pricing: [
-      { label: "1 BHK Goods (per month)",           from: "₹3,500" },
-      { label: "2 BHK Goods (per month)",           from: "₹5,500" },
-      { label: "3 BHK Goods (per month)",           from: "₹8,000" },
+      { label: "1 BHK Goods (per month)",            from: "₹3,500" },
+      { label: "2 BHK Goods (per month)",            from: "₹5,500" },
+      { label: "3 BHK Goods (per month)",            from: "₹8,000" },
       { label: "Commercial Pallets (per pallet/mo)", from: "₹800" },
       { label: "Vehicle Storage (per month)",        from: "₹2,000" },
     ],
     seoTags: ["Warehousing Chandigarh", "Storage Services Chandigarh", "Short-term Storage", "Long-term Warehouse", "Household Storage Chandigarh"],
+    serviceAreas: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Ambala", "Delhi", "Mumbai", "Bangalore"],
+    seoBlocks: [
+      { heading: "Short-Term & Long-Term Storage in Chandigarh", body: "Our Chandigarh warehousing facility offers flexible plans from 7-day short-term to 7-month long-term storage — ideal for households waiting on possession, businesses managing inventory overflow, and individuals relocating in phases. Fixed monthly rates with no lock-in contracts." },
+      { heading: "Household Goods Storage Solutions",             body: "All household goods stored in our facility are individually tagged, photographed, and entered into a digital inventory. You receive a full inventory PDF and can request retrieval of any specific item within 24 hours — no need to collect everything at once." },
+      { heading: "Commercial & Business Storage",                 body: "We offer pallet-based commercial storage for businesses needing overflow inventory space, document archiving, or seasonal stock management in Chandigarh. 24/7 CCTV monitoring, monthly pest treatment, and dedicated loading dock access for commercial clients." },
+    ],
   },
 
   {
@@ -205,8 +231,8 @@ const serviceList: ServiceData[] = [
     label:     "Packaging & Unpacking",
     eyebrow:   "Packing Services",
     accent:    "#FF6B2B",
-    image:     "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=1920&q=90",
+    image:     "/InnerServices/packingUnpacking.png",
+    bannerImg: "/InnerServices/packingUnpacking.png",
     tagline:   "Material-Specific Packing for Zero Damage",
     metaDesc:  "Expert packaging and unpacking services in Chandigarh. Bubble wrap, foam guards, anti-static packing, cell-divider cartons — all items inventoried and labelled.",
     intro:
@@ -242,6 +268,12 @@ const serviceList: ServiceData[] = [
       { label: "Full Pack + Unpack (2BHK)",           from: "₹5,000" },
     ],
     seoTags: ["Packaging Services Chandigarh", "Unpacking Service", "Professional Packing Chandigarh", "Moving Boxes Chandigarh", "Packing Materials"],
+    serviceAreas: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Ambala", "Ludhiana", "Jalandhar", "Amritsar", "Delhi", "Panipat"],
+    seoBlocks: [
+      { heading: "Professional Packing Services in Chandigarh", body: "Our packing team serves Chandigarh, Mohali, Panchkula, and the broader Punjab region. We bring all materials — bubble wrap, foam inserts, cell-divider cartons, wardrobe boxes, and stretch film — and complete a full 2BHK pack in a single day with a team of 3–4 trained packers." },
+      { heading: "Fragile & High-Value Item Packing",           body: "Artwork, antiques, mirrors, crystal, and vintage items require more than standard bubble wrap. Our fragile-specialist team uses custom foam-lined wooden crates, double-wall cartons, and corner guards. Every fragile item is photographed before and after packing — full documentation for your records." },
+      { heading: "Standalone Packing — Without Transport",      body: "Need professional packing but have your own vehicle or rental truck? We provide standalone packing-only and unpacking-only services. Our crew arrives, packs every item with all materials included, builds the inventory list, and hands over ready-to-load labelled cartons." },
+    ],
   },
 
   {
@@ -250,8 +282,8 @@ const serviceList: ServiceData[] = [
     label:     "Loading & Unloading",
     eyebrow:   "Labour Services",
     accent:    "#00B49C",
-    image:     "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=80",
-    bannerImg: "https://images.unsplash.com/photo-1519003300449-424ad0405076?w=1920&q=90",
+    image:     "/InnerServices/loadingUnloading.png",
+    bannerImg: "/InnerServices/loadingUnloading.png",
     tagline:   "Safe, Scratch-Free Heavy Lifting",
     metaDesc:  "Professional loading and unloading services in Chandigarh. Hydraulic trolleys, floor runners, background-checked labour — standalone or as part of a full move.",
     intro:
@@ -280,13 +312,19 @@ const serviceList: ServiceData[] = [
     ],
     stat:    { n: "0", l: "Property Damage Claims" },
     pricing: [
-      { label: "Local Loading (2 crew, 2 hrs)",       from: "₹1,500" },
-      { label: "Local Unloading (2 crew, 2 hrs)",     from: "₹1,500" },
-      { label: "Full Day Labour (4 crew)",            from: "₹5,000" },
-      { label: "Staircase Premium (per floor)",       from: "₹200" },
-      { label: "Standalone Labour Hire (per person/hr)", from: "₹300" },
+      { label: "Local Loading (2 crew, 2 hrs)",           from: "₹1,500" },
+      { label: "Local Unloading (2 crew, 2 hrs)",         from: "₹1,500" },
+      { label: "Full Day Labour (4 crew)",                from: "₹5,000" },
+      { label: "Staircase Premium (per floor)",           from: "₹200" },
+      { label: "Standalone Labour Hire (per person/hr)",  from: "₹300" },
     ],
     seoTags: ["Loading Unloading Services Chandigarh", "Labour for Moving Chandigarh", "Packers Loaders Chandigarh", "Furniture Moving Labour", "Unloading Service"],
+    serviceAreas: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Ambala", "Ludhiana", "Jalandhar", "Amritsar", "Delhi", "Karnal"],
+    seoBlocks: [
+      { heading: "Professional Loading Labour in Chandigarh",    body: "Our loading and unloading crew serves Chandigarh, Mohali, Panchkula, and all tricity areas. All labourers are background-verified, ID-checked, and trained in safe furniture and appliance handling. Hydraulic trolleys, padded floor runners, and door-frame guards come as standard on every job." },
+      { heading: "High-Rise & Staircase Moving Specialists",     body: "Lifts too small? No lift at all? Our staircase specialist crew handles multi-floor moves without lift access using shoulder straps, furniture sliders, and controlled-descent equipment. We have completed 10th-floor moves without a lift — including sofas, refrigerators, and washing machines." },
+      { heading: "Standalone Labour Hire for Self-Movers",       body: "Already have a rental truck or your own vehicle? Hire our trained loading and unloading crew on an hourly basis. We provide the manpower, trolleys, and strapping equipment — you manage the transport. Ideal for local moves, office clearances, and warehouse transfers in Chandigarh and nearby cities." },
+    ],
   },
 ];
 

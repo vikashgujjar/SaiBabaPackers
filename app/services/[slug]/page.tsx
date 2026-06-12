@@ -384,7 +384,71 @@ export default async function ServiceDetailPage({
         </section>
 
         {/* ══════════════════════════════════════════════
-            6. RELATED SERVICES
+            6. IN-DEPTH SEO CONTENT + CITIES WE SERVE
+        ══════════════════════════════════════════════ */}
+        <section className="bg-white py-10 sm:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+
+            {/* Section header */}
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6 sm:mb-12">
+              <div>
+                <span className="block text-[10px] font-black uppercase tracking-[3px] mb-2" style={{ color: s.accent }}>
+                  In Depth
+                </span>
+                <h2 className="text-[32px] lg:text-[46px] font-black text-[#1a1a2e] uppercase leading-[0.92] tracking-tight">
+                  About <span style={{ color: s.accent }}>{s.label}</span>
+                </h2>
+              </div>
+              <p className="text-gray-400 text-[13px] max-w-[260px] leading-relaxed">
+                Everything you need to know about our {s.label.toLowerCase()} in Chandigarh and across India.
+              </p>
+            </div>
+
+            {/* SEO content cards */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+              {s.seoBlocks.map((block, i) => (
+                <div
+                  key={block.heading}
+                  className="group bg-[#F7F4EE] rounded-2xl p-6 border border-gray-100 hover:border-transparent hover:bg-white hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] hover:-translate-y-0.5 transition-all duration-200 relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-0 h-[3px] group-hover:w-full transition-all duration-300" style={{ background: s.accent }} />
+                  <div
+                    className="absolute right-4 top-3 text-[44px] font-black leading-none select-none opacity-[0.05] pointer-events-none"
+                    style={{ color: s.accent }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="text-[13px] font-black uppercase tracking-wide leading-snug mb-3" style={{ color: s.accent }}>
+                    {block.heading}
+                  </h3>
+                  <p className="text-[12.5px] text-gray-500 leading-relaxed">{block.body}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Cities We Serve */}
+            <div className="bg-[#F7F4EE] border border-gray-100 rounded-2xl px-6 py-5">
+              <p className="text-[9.5px] font-black uppercase tracking-[2.5px] mb-4" style={{ color: s.accent }}>
+                Cities We Serve
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {s.serviceAreas.map((city, i) => (
+                  <span
+                    key={city}
+                    className="flex items-center gap-1.5 text-[11.5px] font-medium text-gray-600 bg-white border border-gray-200 hover:border-current rounded-lg px-3.5 py-1.5 transition-colors duration-150 cursor-default"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: i % 2 === 0 ? s.accent : "#00B49C" }} />
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════
+            7. RELATED SERVICES
         ══════════════════════════════════════════════ */}
         <section className="bg-white py-10 sm:py-20">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -438,7 +502,7 @@ export default async function ServiceDetailPage({
         </section>
 
         {/* ══════════════════════════════════════════════
-            7. SEO TAG CLOUD
+            8. SEO TAG CLOUD
         ══════════════════════════════════════════════ */}
         <section className="bg-[#fff] pb-10 pt-0">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6">

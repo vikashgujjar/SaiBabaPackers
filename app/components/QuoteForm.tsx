@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 import Image from "next/image";
 import {
   User, Phone, Mail, MapPin, MessageSquare,
-  ArrowRight, CheckCircle, Truck,
+  ArrowRight, Truck,
   ShieldCheck, BadgeCheck, Clock,
 } from "lucide-react";
 
@@ -16,15 +18,47 @@ export default function QuoteForm() {
     name: "", phone: "", email: "",
     from: "", to: "", message: "",
   });
-  const [sent, setSent] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const router = useRouter();
 
   const set = (k: string) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm(p => ({ ...p, [k]: e.target.value }));
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSent(true);
+    if (!form.name.trim() || !form.phone.trim()) {
+      Swal.fire({ icon: "error", title: "Required Fields", text: "Please enter your name and phone number.", confirmButtonColor: "#FF6B2B" });
+      return;
+    }
+    setLoader(true);
+    try {
+      const res = await fetch("https://mail.futuretouch.org/api/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          company:      "sai-baba-movers",
+          company_name: "Sai Baba Packers & Movers",
+          name:         form.name,
+          phone:        form.phone,
+          email:        form.email,
+          serviceType:  moveType,
+          from:         form.from,
+          to:           form.to,
+          message:      form.message,
+          mail_to:      "www.vgujjar1234@gmail.com",
+        }),
+      });
+      if (res.ok) {
+        router.push("/thank-you");
+      } else {
+        Swal.fire("Error", "Failed to send message. Please try again.", "error");
+      }
+    } catch {
+      Swal.fire("Error", "Something went wrong!", "error");
+    } finally {
+      setLoader(false);
+    }
   }
 
   const inputCls =
@@ -48,8 +82,7 @@ export default function QuoteForm() {
               </h2>
             </div>
 
-            {!sent ? (
-              <form onSubmit={handleSubmit} className="flex flex-col flex-1 px-8 py-7 gap-5">
+            <form onSubmit={handleSubmit} className="flex flex-col flex-1 px-8 py-7 gap-5">
 
                 {/* Move type chips */}
                 <div>
@@ -136,48 +169,16 @@ export default function QuoteForm() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full group flex items-center justify-center gap-2 bg-[#FF6B2B] hover:bg-[#e85d1f] text-white font-black uppercase tracking-[2px] text-[12.5px] py-4 rounded-xl shadow-[0_8px_28px_rgba(255,107,43,0.3)] hover:shadow-[0_12px_36px_rgba(255,107,43,0.45)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200 mt-auto"
+                  disabled={loader}
+                  className="w-full group flex items-center justify-center gap-2 bg-[#FF6B2B] hover:bg-[#e85d1f] disabled:opacity-70 disabled:cursor-not-allowed text-white font-black uppercase tracking-[2px] text-[12.5px] py-4 rounded-xl shadow-[0_8px_28px_rgba(255,107,43,0.3)] hover:shadow-[0_12px_36px_rgba(255,107,43,0.45)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200 mt-auto"
                 >
-                  Send My Enquiry
-                  <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
+                  {loader ? "Sending…" : <><span>Send My Enquiry</span><ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" /></>}
                 </button>
 
                 <p className="text-center text-[10.5px] text-gray-400 font-medium -mt-2">
                   No spam · We respond within 30 minutes
                 </p>
               </form>
-            ) : (
-              /* ── Success ── */
-              <div className="flex-1 flex flex-col items-center justify-center text-center px-8 py-16 gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-[#00B49C]/10 border-2 border-[#00B49C]/20 flex items-center justify-center">
-                  <CheckCircle size={32} className="text-[#00B49C]" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <h3 className="text-[22px] font-black text-[#1a1a2e] uppercase tracking-tight">Enquiry Sent!</h3>
-                  <p className="text-gray-500 text-[13.5px] mt-2 leading-relaxed max-w-[300px]">
-                    Our team will contact{" "}
-                    <span className="font-black text-[#FF6B2B]">{form.phone}</span>{" "}
-                    within 30 minutes.
-                  </p>
-                </div>
-                <div className="text-[12px] bg-[#F7F4EE] rounded-xl px-5 py-4 text-left space-y-1.5 border border-gray-100 w-full">
-                  <div className="flex justify-between">
-                    <span className="font-black text-gray-400 text-[9.5px] uppercase tracking-wider">Route</span>
-                    <span className="font-bold text-[#1a1a2e]">{form.from} → {form.to}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-black text-gray-400 text-[9.5px] uppercase tracking-wider">Type</span>
-                    <span className="font-bold text-[#1a1a2e]">{moveType}</span>
-                  </div>
-                </div>
-                <button
-                  onClick={() => { setSent(false); setForm({ name: "", phone: "", email: "", from: "", to: "", message: "" }); }}
-                  className="text-[11px] text-gray-400 underline hover:text-[#FF6B2B] transition-colors"
-                >
-                  Submit another enquiry
-                </button>
-              </div>
-            )}
           </div>
 
           {/* ── RIGHT: Info panel ── */}

@@ -146,10 +146,9 @@ export default function ClientsCounters() {
       {/* ══════════════════════════════════════
           BOTTOM — cream clients band
       ══════════════════════════════════════ */}
-      <div className="bg-[#F7F4EE] pt-20 pb-16">
+      {/* <div className="bg-[#F7F4EE] pt-20 pb-16">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
-          {/* Sub-header */}
           <div className="flex items-center justify-between gap-6 mb-8 flex-wrap">
             <div>
               <span className="block text-[10px] font-black text-[#00B49C] uppercase tracking-[3px] mb-1.5">
@@ -164,20 +163,17 @@ export default function ClientsCounters() {
             </p>
           </div>
 
-          {/* Brand logo grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
             {CLIENTS.map((client) => (
               <div
                 key={client.name}
                 className="group relative bg-white rounded-2xl border border-gray-100 px-6 py-5 flex flex-col items-center gap-3 hover:border-transparent hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] hover:-translate-y-0.5 transition-all duration-200 overflow-hidden cursor-default"
               >
-                {/* Accent top bar on hover */}
                 <div
                   className="absolute top-0 left-0 w-0 h-[2.5px] group-hover:w-full transition-all duration-300 rounded-br-full"
                   style={{ background: client.color }}
                 />
 
-                {/* Logo */}
                 <div className="h-8 flex items-center">
                   <Image
                     src={client.src}
@@ -188,7 +184,6 @@ export default function ClientsCounters() {
                   />
                 </div>
 
-                {/* Name + verified dot */}
                 <div className="flex items-center gap-2">
                   <span
                     className="w-1.5 h-1.5 rounded-full shrink-0"
@@ -202,13 +197,12 @@ export default function ClientsCounters() {
             ))}
           </div>
 
-          {/* Bottom footnote */}
           <div className="mt-6 flex items-center justify-center gap-2 text-[11px] text-gray-400 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00B49C]" />
             All clients verified · Ongoing service agreements
           </div>
         </div>
-      </div>
+      </div> */}
 
     </section>
   );
